@@ -3,4 +3,4 @@
 
  Agora, aprendendo a gerenciar repositórios!
 
- <a href="https://luukhe.github.io/HTML-CSS/Exercicios/desafio010/index.html">Link para o desafio 010</a>
+ <a href="https://luukhe.github.io/HTML-CSS/Exercicios/desafio09/index.html">Link para o desafio 09</a>
