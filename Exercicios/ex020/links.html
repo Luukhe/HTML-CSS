@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: rgb(73, 0, 0);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: aqua;
+        }
+
+        a::after{
+            content: '⇐';
+        }
+
+        a::before {
+            content: '⇒';
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h1 class="rand">Personalizando Links</h1>
+
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Repositorio Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" rel="external">Site do CursoemVideo</a></li>
+    </ul>
+
+    <p><strong>ANOTAÇÕES:</strong> Nesta aula, vimos as novas pseudo classes:</p>
+    <ul>
+        <li><strong>visited:</strong> Permite trocar a cor de um link JÁ VISITADO</li>
+        <li><strong>active:</strong> Permite o efeito da troca de cor de um CLIQUE ATIVO, de quando estamos com o click segurado, haver uma TROCA DE COR.</li>
+    </ul>
+
+    <p><strong>VIMOS TAMBÉM, QUE ERA O FOCO, OS <ins>PSEUDO ELEMENTOS</ins>.</strong> Os pseudo elementos são representados por <strong>DOIS PONTOS, DUAS VEZES: "::"</strong>. Os pseudo elementos podem ser usados tanto nas classes quanto nos elementos (assim como as pseudo classes também...). Pelo que eu entendi, os pseudo elementos tem praticamente a mesma função das pseudo classes... (MAS EU ACHO QUE O INTUITO É MEXER MAIS COM CONTEÚDO)</p>
+    <p>Exemplos vistos na aula:</p>
+    <ul>
+        <li><strong>after:</strong> Permite ADICIONAR coisas <strong>(JUNTAMENTE COM O COMANDO CONTENT: ' ')</strong> <strong>DEPOIS</strong>, como o nome sugere, do elemento escolhido, ao invés de ser adicionado diretamente na tag/link do elemento.</li>
+        <li><strong>before:</strong> Funciona da mesma forma que o after <strong>(JUNTAMENTE COM O COMANDO CONTENT: ' ')</strong>, mas, como o nome sugere, o que for adicionado, é adicionado <strong>ANTES.</strong></li>
+        <li><strong>*As informações adicionais deverão ser colocadas dentro das aspas do content*</strong></li>
+    </ul>
+
+
+    <a href="hover.html">Ir para a pagina sobre hover</a>
+    <br>
+    <a href="pseudoclasse.html">Ir para a pagina sobre pseudo classes</a>
+
+</body>
+</html>

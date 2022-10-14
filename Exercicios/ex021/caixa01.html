@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+
+    <style>
+
+        h1 { /* box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            
+            border: 10px solid crimson;
+
+            padding: 10px;
+
+            margin: 20px auto 40px auto;
+
+            outline: 5px dashed salmon;
+
+        }
+
+
+        a { /* inline-level */
+            border-width: 10px;
+            border-style: solid;
+            border-color: brown;
+
+            padding: 10px;
+            
+            
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+
+
+    <p><strong>ANOTAÇÕES:</strong>Sempre que olharmos o nome <strong>"user agent"</strong>, devemos lembrar que é o nosso NAVEGADOR, e todo navegador tem uma configuração básica.</p>
+    <p><strong>IMPORTANTE: SEMPRE QUE UM ELEMENTO FOR UM "DISPLAY: BLOCK", ELE SERÁ UM ELEMENTO DO TIPO BOX-LEVEL!!!!!</strong></p>
+    <p><strong>MUITÍSSIMO IMPORTANTE!!! PARA CENTRALIZARMOS ALGO (NÃO SEI SE FUNCIONA PRA INLINE-LEVEL), PODEMOS USAR "MARGIN: AUTO"!!!</strong> O margin: auto sempre centralizará a caixa não importando quantos pixels existem na tela, pois ele adiciona <strong>MARGENS NA ESQUERDA E NA DIREITA</strong>, proporcionalmente!!</p>
+    <p><strong>SOBRE O OUTLINE:</strong> O outline fica DENTRO da margem, pra FORA do border. Pode-se até aumentar o tamanho do outline de uma maneira que o faça estrapolar o tamanho do margin, mas isso NÃO alterará o tamanho do margin.</p>
+    <p><strong>MUITO IMPORTANTE!!!</strong> Quando formos alterar os valores de padding e margin, devemos sempre fazer a alteração no <strong>SENTIDO HORÁRIO! AINDA SOBRE ISSO:</strong>Se os valores de todos os lados forem iguais, podemos também fazer o shorthand do mesmo, digitando apenas "padding: 10px", por exemplo. O mesmo valor será atribuido a <strong>TODOS OS QUATRO LADOS! ENTÃO:</strong> Se de qualquer maneira o intuito for alterar o padding, sendo que apenas UM lado será diferente, devemos alterar todos um por um para colocarmos o padding diferente (se o intuito for mexer em <strong>UM LADO SÓ DO PADDING, sem alterar os outros lados, então usa-se só o lado que for alterar, exemplo: "padding-top: 10px"). OUTRO DETALHE IMPORTANTE:</strong> se no <strong>SHORTHAND</strong> alterarmos apenas DOIS LADOS, os lados que contarão serão os lados contando o sentido horário (logo: top e right) e, os lados <strong>OPOSTOS</strong> que não foram especificados, receberão os valores do lado oposto. (ou seja, nesse caso, bottom receberá o valor de top e left receberá o valor de right).</p>
+    <p><strong>OUTRA DICA IMPORTANTE:</strong> também pode-se colocar o parâmetro "AUTO" quando estivermos configurando os pixels dos lados do margin, exemplo: "margin: 20px auto 40px auto;". Como podemos ver, ambos os lados estão "auto", logo, a caixa está CENTRALIZADA.</p>
+
+    <p><strong>DICA LEGAL:</strong> existe também o <strong>display: inline-block</strong>!!!! Dessa forma, o elemento <strong>continuará sendo inline, mas TERÁ ALGUMAS CARACTERÍSTICAS DE BLOCO, podendo assim alterar o tamanho, largura, altura etc</strong> (ALGO QUE NO INLINE NÃO PODE SER ALTERADO).</p>
+    
+</body>
+</html>

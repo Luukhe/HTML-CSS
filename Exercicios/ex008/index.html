@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de textos</title>
+    
+    <!--TAMBÉM PODE-SE MUDAR O ESTILO DE TODAS AS TAGS (DA MESMA FORMA QUE DÁ PARA FAZER LÁ NO CSS) AQUI E, TAMBÉM UTILIZANDO O STYLE, SÓ QUE DESSA VEZ (AO INVÉS DE MUDAR UMA VEZ SÓ DENTRO DA TAG), ABRE-SE E FECHA A TAG STYLE PARA INCLUIR QUAL TAG QUEREMOS MUDAR (NOVAMENTE, JUSTAMENTE IGUAL AO CSS), EXEMPLO: -->
+
+    <style>
+        mark{
+            background-color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Nessa frase, temos um<b> termo em negrito usando a tag B </b>(que é uma forma NÃO SEMÂNTICA) de se usar o negrito.</p>
+    <p>Já nesta frase, temos um <strong>termo em DESTAQUE </strong>usando a tag STRONG (que é uma tag SEMÂNTICA).</p>
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semantica)</p>
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag EM (SEMÂNTICO)</p>
+    <h2>Texto marcado</h2>
+    <p>Podemos criar também um <mark>texto marcado</mark> usando a tag MARK. (Por padrão, a tag MARK já vem com aquela cor de "marca-texto", podemos alterá-la usando um parâmetro chamado STYLE, que é melhor usado quando for para mexer em uma tag por si só".</p>
+    <p>E no outro parágrafo, temos <mark>outro texto marcado</mark> no final.</p>
+    <h2>Texto grande e Pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo. (Podemos ver que a tag BIG entrou/vai entrar em desuso por ser só uma tag de FORMA que podemos facilmente aumentar no css. Já a tag SMALL ainda existe por ainda existir alguma SEMÂNTICA para ela)</p>
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido mas não considerado. (Esse é o efeito de um texto RASURADO, riscado.)</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois. COMPLEMENTO: a tag INS dá o efeito de SUBLINHADO. Existe também a tag U que possui o mesmo efeito, porém é uma tag NÃO SEMÂNTICA. Já o INS, É SEMÂNTICA</p>
+    <h2>Texto Sobrescrito</h2>
+    <p>Para inserir coisas do tipo x<sup>20</sup>+3</p>
+    <h2>Texto Subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>O</p>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="1" start="1">
+        <li>Acordar</li>
+        <li>Ligar para o Joao</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Lavar roupa</li>
+    </ol>
+    <p>Essas são listas ORDENADAS (ordered lists, tag: OL) que precisam ter os itens DENTRO da OL em forma de tag (tag: LI) que literalmente ORDENAM uma lista, ENUMERANDO-AS. Sendo assim, sempre que precisarmos adicionar um item na lista, a lista se REORDENARÁ e o item incluso se ALOCARÁ normalmente dentro da lista, fazendo com que não precisemos mudar item a item conforme a numeração. </p>
+    <p>Podemos também mudar o TIPO de "CONTADOR" da lista, usando o parâmetro TYPE e, também, dizer DE ONDE a lista deve COMEÇAR A CONTAGEM, usando o parâmetro START.</p>
+
+    <h2>Listas NÃO Ordenadas</h2>
+    <ul>
+        <li>Pão</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    <p>As listas NÃO ordenadas (tag: UL), é a lista onde não precisamos NOS PREOCUPAR com a ORDEM dos itens dentro da lista, onde não precisamos enumerar a sequência. Apenas DEMARCAR.</p>
+    <p>Embora não apareça como sugestão na UL, pode-se usar o parâmetro TYPE para mudar o formato dos índices da lista não ordenada, com os valores: DISC (que é o padrão), CIRCLE e SQUARE.</p>
+    <h2>Juntando listas versão 1.0</h2>
+    <h3>Minhas linguagens favoritas</h3>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+    <h2>Meus Jogos Favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+    <h2>Lista de Definições</h2>
+    <p>A definition list (tag: DL) funciona como se fosse um dicionário, onde a DL é a lista de definição, dentro dela teremos a tag DT (tag para o TERMO), e a tag DD (tag de DEFINIÇÃO do termo).</p>
+    <dl>
+        <dt>HTML (TERMO)</dt>
+        <dd>Linguagem de marcação para a criação do conteúdo de um site. (DEFINIÇÃO)</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+
+        * {
+            height: 100%;
+        }
+
+        body {
+
+            background-image: linear-gradient(to right, #224961, #95C7E6, #4EA9E0);
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+    <p>Para usarmos um gradiente, usa-se a propriedade <strong>BACKGROUND-IMAGE</strong>, com o <strong>LINEAR-GRADIENT</strong>, tudo dentro do STYLE (como feito neste exercício, usando o style LOCAL, ou seja, dentro do HEAD). Assim:</p>
+    <p>background-image: linear-gradient ();</p>
+    <p><strong>OBVIAMENTE</strong>, ainda falta indicar os <strong>PARÂMETROS</strong> do linear gradient. O primeiro parâmetro a ser utilizado é a DIREÇÃO para onde o gradient irá, em seguida, as CORES. Logicamente, as cores que vierem primeiro são as que seguirão na <strong>ORDEM PARA A DIREÇÃO INDICADA</strong>. Por exemplo:</p>
+    <p>
+        <strong>background-image: linear-gradient(to right, #ffffff, #0000ff);</strong>
+        <br>
+        As direções podem ser: to right, to left, to top, to bottom, <strong>PODENDO TAMBÉM, USAR ANGULOS!! Exemplo: 90deg, 45deg</strong>
+    </p>
+    <p><strong>MUITO IMPORTANTE!!</strong> Quando usamos a direção do linear gradient para BOTTOM, ou TOP, o degrade fica meio BUGADO, meio que "começando" em cada <strong>elemento localizado</strong><br>Usa-se, então, uma propriedade chamada <strong>background-attachment: fixed;</strong> para que que o gradient fique unificado pelo body inteiro, e não começando e terminando no início e final de cada elemento.</p>
+
+    <p><strong>IMPORTANTE!!!!</strong> Existe também a propriedade: <strong>RADIAL-GRADIENT</strong>, com o parâmetro de direção <strong>CIRCLE.</strong> Assim: <br> <strong>background-image: radial-gradient(circle, #224961, #95C7E6, #4EA9E0);</strong></p>
+
+    <p><strong>DICA LEGAL:</strong> Pode-se usar um valor de porcentagem para cada cor, para determinar o quanto em % da tela aquela cor OCUPARÁ!!! É colocado com um espaço, depois do código da cor. Ex: <br> <strong>background-image: linear-gradient(to right, #224961 80%, #95C7E6, #4EA9E0);</strong> </p>
+</body>
+</html>

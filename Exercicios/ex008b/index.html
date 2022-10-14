@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+
+    <h2>Código fonte / Pré formatado</h2>
+    <p>O comando <code>document.getElementsbyId('teste')</code> é escrito em linguagem JavaScript. (O code é o que é chamado de FONTE MONOESPAÇADA, pois selecionando cada letra ou ponto da frase envelopada em exemplo com o code, TODAS terão o mesmo "comprimento" quando selecionadas. É uma tag para LER CÓDIGOS)</p>
+
+    <pre>
+        <code>
+            Digamos que exista umas linhas de código aqui
+            As linhas de código são indentadas, obviamente
+            A mistura da tag CODE com a tag PRE faz com que
+            A indentação apareça normalmente. Sem ela, o código
+            ficaria tudo na mesma linha!!
+
+            E Fica tudo exatamente do jeito que a gente
+    Escrever!!!
+            
+        A tag pre também é uma tag de formatação de texto.
+        </code>
+    </pre>
+
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q>. Essa tag Q, ela SIMPLESMENTE coloca aspas no que estiver dentro dela. Logicamente, a diferença entre colocar aspas manualmente e usar a tag, é que a tag Q possui SEMÂNTICA, e sua citação ganha MAIS PESO e SENTIDO.</p>
+
+    <h2>Citações Completas</h2>
+    <p>Segundo Jeff Noble e, no seu livro HTML para Leigos:</p>
+
+    <!--O PARÂMETRO CITE SERVE PARA LITERALMENTE CITAR O LINK DE ONDE A CITAÇÃO FOI TIRADA, O QUAL POSSUI UMA SEMÂNTICA (MECANISMOS DE BUSCA) MAIOR PARA O LINK COLOCADO. TODOS OS MECANISMOS DE BUSCA SABERÃO QUE A FRASE ESTÁ REFERENCIANDO O LINK COLOCADO NO PARÂMETRO CITE!!!-->
+
+    <blockquote cite="link">
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+
+        (Já essa citação blockquote aqui, diferente da tag Q que só coloca aspas, ela coloca um ESPAÇAMENTO, como se fosse uma indentação. É uma citação para um determinado autor, uma citação COMPLETA)
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. (HTML e CSS pode ser considerado uma abreviação. Podemos dizer para os mecanismos de busca e para quem visita o site o que significam as siglas, com a tag "ABBR". Quando envelopamos com essa sigla, ele já sugere que coloquemos um TITLE, que seria o SIGNIFICADO da sigla. Nota-se que ao passar o mouse por cima das abreviações exemplificadas, aparece o conteúdo colocado no title do abbr.)</p>
+
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo> .(A tag para fazer isso é a BDO. BDO com o R, o "dir" ficara "rtl", o que significa RIGHT TO LEFT. Escolhendo o L, será o contrário.)</p>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus repellat, veniam, sed voluptatum quaerat corporis beatae accusamus obcaecati ipsa harum excepturi eligendi assumenda porro perferendis nesciunt quos officia expedita vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam, aspernatur repudiandae nam sequi harum numquam nemo aperiam perspiciatis animi, eos asperiores ipsa nulla voluptatem vel possimus velit consequuntur pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempore ipsa, quod ea quae pariatur quas praesentium eaque nostrum distinctio rem assumenda facilis deserunt odio, vitae inventore, temporibus animi molestias.</p>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/irina-blok-pq.jpg">
+            <img src="images/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus repellat, veniam, sed voluptatum quaerat corporis beatae accusamus obcaecati ipsa harum excepturi eligendi assumenda porro perferendis nesciunt quos officia expedita vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, aliquam, aspernatur repudiandae nam sequi harum numquam nemo aperiam perspiciatis animi, eos asperiores ipsa nulla voluptatem vel possimus velit consequuntur pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempore ipsa, quod ea quae pariatur quas praesentium eaque nostrum distinctio rem assumenda facilis deserunt odio, vitae inventore, temporibus animi molestias.</p>
+
+        <p><strong>ANOTAÇÕES SOBRE MAX/MIN WIDTH:</strong> No exemplo utilizado aqui nesta página, foi utilizado um max width de 800px, e um min width de 320px. <strong>ISSO QUER DIZER QUE:</strong> no max width, o valor MÁXIMO que o main (onde está sendo colocado os valores de width) ocupará, mesmo em telas muito grandes, será de 800px, e o tamanho mínimo que ocupará será de 320px. <br>
+        <strong>O QUE EU ENTENDI SOBRE:</strong> Literalmente, o conteúdo terá um valor máximo de 800px de largura e um mínimo de 320 de largura, ou seja, se o tamanho da largura da tela estiver ENTRE esses dois valores, ele irá mudar e se adaptar automaticamente até chegar nas larguras especificadas, onde não sofrerá mais mudanças na largura, ou seja, o conteúdo inteiro <strong>sempre se alocará dentro das larguras especificadas, nunca indo abaixo de 320px ou acima de 800px.</strong>
+        </p>
+</body>
+</html>

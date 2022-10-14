@@ -1,0 +1,30 @@
+Planejam-se 3 coisas antes: 
+
+1. Layout
+
+2. As cores do site
+
+3. As fontes usadas no projeto
+
+
+
+
+
+---- SOBRE O PLANEJAMENTO ---- :
+
+1. FERRAMENTA DE PLANEJAMENTO DE SITES:
+
+**** mockflow.com ****
+
+- Pra que serve?
+
+Ele criará MOCKS, e MOCKS são tipo WIREFRAMES, é uma estrutura de um site, vamos utilizá-lo para DESENHAR o FORMATO DO SITE. É importante pois devemos planejar as caixas que o site terá.
+
+
+2. VISITAR O ADOBE COLORS, TENTAR SEMPRE CRIAR UMA PALETA DE COR EM VOLTA DA COR DO "OBJETO" PRINCIPAL DO TEMA DO SITE
+(Por exemplo, no site criado de exemplo aqui, foi usado como --BASE-- o verde do bonequinho do ANDROID. Dessa cor como base, escolher as outras cores da paleta.)
+
+
+3. ***AO ESCOLHER AS FONTES, SEMPRE SE ATENTAR SE A FONTE ESCOLHIDA POSSUI CARACTÉRES (ESPECIAIS?) COM ACENTO, CEDILHA ETC.***
+
+

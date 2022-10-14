@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor!</p>
+    <p>Anotações minhas: da mesma forma que os áudios, os vídeos também existem em diferentes formatos e também podem ser carregados no site com os diferentes formatos, a fim de agradar os diferentes navegadores que possam ou não sem compatíveis com algum formato de vídeo colocado.</p>
+    <p>E também, da mesma forma que os áudios, existe a forma mais simples que é com a tag "VIDEO", acompanhado do src. Ou seja, a forma de carregar múltiplos vídeos de diferentes formatos é a <strong>MESMA</strong> dos áudios (remove-se o parâmetro SRC da TAG VIDEO, e coloca DENTRO da tag, uma OUTRA TAG: "SOURCE", como visto na aula sobre upload dos áudios).<br> OBS: o vídeo quando carregado primeiramente, ocupará, na TELA, o tamanho dele em PIXELS! Ou seja, um vídeo de 720p, ocupará 720 pixels da tela. Usa-se o parâmetro WIDTH para diminuí-lo. <br> OBS 2: Da mesma forma que os áudios, quando o vídeo carregado SEM o parâmetro <strong>CONTROLS</strong>, ficará só uma imagem estática na tela. Por isso, usa-se TAMBÉM o parâmetro CONTROLS! <br> OBS 3: O parâmetro PRELOAD com os valores METADATA, NONE E AUTO também são utilizados!</p>
+    <p>Código para colocar o vídeo de forma simplificada: <br> <code>&lt;video src="midia/video.mp4" width="220" controls preload="metadata"&gt;&lt;/video&gt;</code></p>
+
+    <video src="midia/video.mp4" width="220" preload="metadata" poster="imagens/limoes-capa.png" controls loop></video>
+
+    <p>LEMBRANDO: quando formos colocar vários vídeos de formatos diferentes a serem carregados, a ORDEM deles importará para QUAL será carregado primeiro! <br> 
+    Código para colocar o vídeo em diferentes formatos:</p>
+
+    <pre>
+        <code>
+            &lt;video width="300" poster="imagens/limoes-capa.png" preload="metadata" controls&gt;
+                &lt;source src="midia/video.mp4" type="video/mp4"&gt;
+                &lt;source src="midia/video.m4v" type="video/m4v"&gt;
+                &lt;source src="midia/video.webm" type="video/webm"&gt;
+                &lt;source src="midia/video.ogv" type="video/ogg"&gt;
+                &lt;p&gt;Seu navegador não tem compatibilidade com reprodução de vídeo &lt;a href="midia/video.mp4"&gt;Clique aqui para baixar o arquivo MP4&lt;/a&gt;&lt;/p&gt;
+            &lt;/video&gt;
+        </code>
+    </pre>
+
+    <p><strong>PARÂMETRO MUITO INTERESSANTE PARA VÍDEOS: </strong>o parâmetro "POSTER" permite colocarmos uma CAPA para o vídeo (logicamente, ele vai pedir a imagem que é pra colocar), para que ele comece com uma imagem de escolha nossa ao invés de começar com a imagem inicial do vídeo!</p>
+    <p><strong>NOTA:</strong>esse método consome MUITA banda, sairá caro para o cliente!</p>
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <p>Para inserir vídeos do YT, basta ir no vídeo em si, clicar em <strong>COMPARTILHAR</strong>, e depois <strong>INCORPORAR</strong>. Um link será gerado pelo próprio YT, então, é só clicar em copiar.</p>
+    <p><strong>VANTAGEM:</strong>A grande vantagem de usar um vídeo que está carregado em OUTRA plataforma, é que quando é dado PLAY no vídeo, os dados consumidos pelo vídeo são consumidos PELA PLATAFORMA EXTERNA, e não pelo seu próprio host.</p>
+    <p>Já que o YouTube em si é também uma ferramenta do Google e é a SEGUNDA maior plataforma de busca, é <strong>ALTAMENTE RECOMENDADO</strong> que o cliente tenha um canal no YT e que os vídeos do site dele sejam linkados do próprio YT pois, se o vídeo do cliente está NO SITE e além do site, está no YT também, isso <strong>AMPLIA AINDA MAIS</strong> a visualização, a abrangência que o algorítmo do google dará, já que o YouTube TAMBÉM é do Google. <br>
+    Vídeo:</p>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/39ybaZiwluc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>

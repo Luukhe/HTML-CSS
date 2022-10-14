@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+h1#principal {
+    text-align: center;
+    background-color: rgb(29, 52, 129);
+    color: whitesmoke;
+}
+
+.basico {
+    color: rgb(0, 105, 26);
+    font-weight: bold;
+}
+
+.intermediario {
+    color: rgb(168, 165, 0);
+    font-weight: bold;
+}
+
+.avancado {
+    color: rgb(223, 47, 47);
+    font-weight: bold;
+}
+
+.rand {
+    font-weight: bold;
+    background-color: crimson;
+}
+
+body {
+    background-color: rgb(155, 213, 247);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+}
+
+h1 {
+    color: rgb(29, 52, 129);
+}
+
+h2 {
+    color: rgb(41, 77, 110);
+}
+
+p {
+    text-indent: 15px;
+}

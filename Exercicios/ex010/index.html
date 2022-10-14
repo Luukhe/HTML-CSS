@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links EXTERNOS</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+    <p>PS: É sempre bom usar o parâmetro TARGET="_BLANK", que redireciona o site do link para uma nova aba sem sair do seu site. (O target blank é um parâmetro que pode ficar tanto antes quanto depois do link). Já o parâmetro REL (com o valor EXTERNAL), indica para os mecanismos de busca que o link é um link externo ao seu site. </p>
+    <h2>Usando links INTERNOS</h2>
+    <p>Os links internos é um link que vai fazer a RELAÇÃO com outra página que está DENTRO do nosso próprio servidor, que condiz e diz respeito à nossa própria página. Porém, antes de um link interno ser criado, precisamos ter OUTRAS PÁGINAS (dentro do site).</p>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next">segunda página</a></p>
+    <p>PS: Utiliza-se também, parâmetros REL para links INTERNOS, com o valor "next" para uma página a ser levada, e o valor "prev" para uma página que tem um link interno para VOLTAR para a primeira. Isso facilica os mecanismos de busca a encontrarem como é o sistema de navegação que você está criando.</p>
+    <p>Em suma, para criar um link externo, usa-se a mesma tag (tag: "A", de ANCHOR) usada para criar links externos. A única diferença, é que para um link interno é necessário colocar o CAMINHO da nova página.</p>
+    <p>Outro VALOR bem importante para o parâmetro REL, é o valor "nofollow". Esse valor indica que o link utilizado NÃO é sabido que seja um link OFICIAL, o link não tem o seu AVAL, quando você não quer que o mecanismo de busca perpetue essa busca.</p>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next">página de notícias</a></p>
+    <h1>Links para download</h1>
+    <p>Também usa-se a tag "A", de anchor. Podemos, inclusive, mesclar as coisas que aprendemos até agora, como simplesmente colocar os links para download em listas! É interessante, também, enquanto estivermos só criando as tags dos links e não tivermos um link ainda para colocar, usar uma HASHTAG (#) no lugar do link, para indicar que é um link vazio.</p>
+    <ul>
+        <li><a href="livro/06 - Imagens e Favicon.pdf" target="_blank">Link para download em PDF</a></li>
+        <li><a href="livro/06 - Imagens e Favicon.zip">Link Para download em ZIP</a></li>
+    </ul>
+    <p>ADENDO: No vídeo da aula, o professor também usou os parâmetros "download" e "type" para fazer os downloads dos arquivos. Não funcionou com o arquivo em pdf, pois o navegador já reconhece o pdf por si só (não entendi muito). Então, nesse caso, é mais fácil colocar um target blank, pois em arquivos pdf sempre tem o botãozinho de imprimir ou salvar. (NOTA: para utilizar o parâmetro TYPE, é preciso colocar valores referentes aos respectivos FORMATOS dos arquivos, por exemplo: type="application/pdf".)</p>
+    <p>ADENDO 2: No caso do arquivo ZIPADO, o professor também utilizou os mesmos parâmetros, só mudou (obviamente) o parâmetro do TYPE, usando: type="application/zip". Porém, tanto com quanto sem os "novos" parâmetros e valores, o download no caso do ZIP funcionou normalmente.</p>
+</body>
+</html>

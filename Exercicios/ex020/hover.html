@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        div:hover {
+            color: crimson;
+        }
+
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+
+    <p>Fim do exemplo</p>
+
+    <p><strong>ANOTAÇÕES:</strong> Para indicarmos no CSS um elemento que seja <strong>FILHO</strong> de um OUTRO elemento (por exemplo, no caso desta página aqui, o texto "TEXTO ESCONDIDO..." é um parágrafo dentro de uma div, logo, o parágrafo é FILHO da div), indicamos da seguinte forma: <strong> div > p </strong></p>
+
+    <a href="pseudoclasse.html">Voltar para a primeira pagina de pseudo classes</a>
+    <br>
+    <a href="links.html">Ir para a pagina sobre links</a>
+
+</body>
+</html>

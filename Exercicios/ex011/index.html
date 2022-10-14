@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 720px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <p>A tag <strong>PICTURE</strong>, é uma tag utilizada para carregar imagens com DIFERENTES tamanhos, para diferentes PIXELS de TELA.</p>
+
+    <p>Código utilizado:</p>
+    <pre>
+        <code>
+            &lt;picture&gt;
+                &lt;source media="(max-width: 720px)" srcset="imagens/foto-p.png" type="image/png"&gt;
+                &lt;source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"&gt;
+                &lt;img src="imagens/foto-g.png" alt="Imagem flexível"&gt;
+            &lt;/picture&gt;
+        </code>
+    </pre>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <p>Observações minhas: a tag mais simples usada para reproduzir um áudio em um site, é a tag &lt;audio&gt;. Mas, ela sozinha não funcionará (pelo que eu vi), é necessário, também, adicionar os parâmetros "CONTROLS" e "AUTOPLAY". O parâmetro controls, como o nome propriamente diz, te permite usar um mini player de música, onde (obviamente) você pode mutar o som, diminuir volume e dar play/pause. <br> OBS: TESTEI SÓ COM O PARÂMETRO CONTROLS E FUNCIONOU NORMALMENTE!!! FUNCIONOU SEM O AUTOPLAY!!</p>
+    <p>O código ficará assim: <br> <code>&lt;audio src="midia/retribution-neffex.mp3" controls&gt;&lt;/audio&gt;</code></p>
+    <p>Outra forma de reproduzir áudio, será usando novamente a tag AUDIO, PORÉM, RETIRA-SE O PARÂMETRO SRC e adiciona-se, DENTRO da tag AUDIO, a <strong>--TAG--</strong> "SOURCE:SRC", ELA SIM COM O PARÂMETRO SRC!! Sim, a mesma usada para fazer imagens dinâmicas acima. Será adicionado, também, o parâmetro "TYPE" junto, onde será preciso especificar o FORMATO do áudio. A grande VANTAGEM de usar esse modo, é que podemos colocar (dentro da tag audio) vários sources com o mesmo arquivo, só que com DIFERENTES FORMATOS, para caso de algum navegador NÃO conseguir reproduzir algum formato. E, LEMBRANDO: a ORDEM de cada source importa, será a ordem de QUAL formato será carregado primeiro.</p>
+    <p>Exemplo de como ficaria e com os TYPES especificados de cada formato:</p>
+    <pre>
+        <code>
+            &lt;audio controls&gt;
+                &lt;source src="midia/retribution-neffex.mp3" type="audio/mpeg"&gt;
+                &lt;source src="midia/retribution-neffex.ogg" type="audio/ogg"&gt;
+                &lt;source src="midia/retribution-neffex.wav" type="audio/wav"&gt;
+                &lt;p&gt;Infelizmente seu navegador não consegue reproduzir áudio. &lt;a href="midia/retribution-neffex.mp3"&gt;Clique aqui para baixar o arquivo MP3.&lt;/a&gt;&lt;/p&gt;
+            &lt;/audio&gt;
+        </code>
+    </pre>
+    <p>Bonus: Se caso nenhum dos formatos funcionar no navegador da pessoa, um link para baixar o áudio.</p>
+    <p>Existe também o parâmetro "preload" para a tag audio. O parâmetro preload tem três valores: auto, metadata e none.</p>
+    <ol>
+        <li>Auto: só vai ser considerado que o site foi completamente carregado DEPOIS de carregar também o ÁUDIO junto. Ou seja, ele carrega o áudio juntamente do site, podendo dificultar a navegação do usuário.</li>
+        <li>Metadata: carregará só o básico do arquivo (exemplo: duração, nome do arquivo, data etc) e só carregará o áudio em si quando o usuário der play.</li>
+        <li>None: como o nome sugere, não carregará nada antes do usuário dar PLAY.</li>
+    </ol>
+    <audio controls>
+        <source src="midia/retribution-neffex.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/retribution-neffex.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+    
+</body>
+</html>

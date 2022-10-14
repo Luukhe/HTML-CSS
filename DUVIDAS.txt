@@ -1,0 +1,7 @@
+Anotações referentes a dúvidas para pesquisar futuramente, para não esquecer
+
+- Estudar/pesquisar sobre DISPLAY (ou sei lá, grid)
+
+- Como fazer HOVER (além das pseudo classes)
+
+- (Caso ter dúvida sobre o conceito de CAIXAS, modelo de caixas ou box sizing, pesquisar por: HTML e CSS BOX MODEL)

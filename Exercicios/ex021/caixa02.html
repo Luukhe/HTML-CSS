@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, gray, white);
+            margin: 0px;
+        }
+
+        header {
+            background-color: rgb(252, 236, 208);
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h1 {
+            box-shadow: inset 0px 0px 13px 6px rgba(0, 0, 0, 0.514);
+        }
+
+        nav {
+            background-color: lightskyblue;
+            padding: 5px;
+            box-shadow: 1px 1px 16px 10px black;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+            margin-right: 25px;
+            
+        }
+
+        nav > a:hover {
+            color: blueviolet;
+            background-color: black;
+            text-decoration: underline;
+            
+        }
+
+        main {
+            background-color: rgb(190, 190, 190);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px;
+            box-shadow: 5px 6px 9px 2px black;
+        }
+
+        article {
+            background-color: lightgrey;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(151, 151, 151);
+        }
+
+        footer {
+            background-color: rgb(29, 29, 29);
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        .anotacoes {
+            margin: 10px;
+        }
+
+        .bola {
+            background-color: whitesmoke;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 10px;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="assuntos">
+            <p>Esportes Politica Tecnologia</p>    
+        </section>
+        <section class="noticias">
+            <article>
+                <h2>Noticia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat, omnis autem nulla sequi laudantium ex ea consequatur molestias vel, quas incidunt obcaecati voluptate molestiae fuga, delectus odio. Sapiente, enim.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por CursoemVideo</p>
+    </footer>
+
+    <div class="bola"></div>
+
+    <div class="anotacoes">
+        <p><strong>ANOTAÇÕES: DICA IMPORTANTE,</strong> sempre se atentar com a <strong>MARGEM INICIAL DO PRÓPRIO BODY</strong>, pois caso queira que um elemento (como o caso do footer, no exemplo utilizado deste exercício) fique coladinho nos lados, é necessário zerar a margin <strong>TAMBÉM</strong> do body, pois, como já dito, ele tem uma margem própria (a qual afetará todos os outros elementos, no caso).</p>
+        <p><strong>SOBRE SOMBRA NAS CAIXAS:</strong> Para fazermos sombra nas caixas, utilizamos o comando <strong>"box-shadow"</strong>, que já é um SHORTHAND. Com o comando, devemos também informar os parâmetros, que são:</p>
+        <ol>
+            <li><strong>DESLOCAMENTO HORIZONTAL;</strong></li>
+            <li><strong>DESLOCAMENTO VERTICAL;</strong></li>
+            <li><strong>ESPALHAMENTO;</strong></li>
+            <li><strong>ALCANCE;</strong></li>
+            <li><strong>COR;</strong></li>
+        </ol>
+        <p><strong>DICA MUITO LEGAL:</strong> Uma alternativa bem legal para criar nossa <strong>própria sombra</strong>, é: <strong>ir no dev tools, identificar o box-shadow e, logo depois dos dois pontos, haverá dois mini quadradinhos. Clicamos nele, e então podemos personalizar o box-shadow de um jeito muito mais prático.</strong></p>
+        <p><strong>OUTRA DICA LEGAL:</strong> Colocando o parâmetro <strong>INSET</strong>, a sombra pode ser colocada para dentro! (como feito no H1)</p>
+
+        <p><strong>SOBRE ARREDONDAMENTO DOS VÉRTICES:</strong> Para arrendondarmos os vértices DAS BORDAS de um elemento, usamos o comando <strong>BORDER-RADIUS</strong>. Como dito, ele permite que a borda de um elemento fique mais arredondadinha conforme o valor for aumentando (exemplo no main). <strong>E, da mesma forma que no margin, caso coloquemos apenas DOIS valores, os lados opostos também receberão os valores colocados.</strong> E, logicamente, também podemos adicionar sombras.</p>
+        <p>Também pode-se configurar <strong>individualmente cada canto das bordas <strong>(ou seja, muito provavelmente o "border-radius" em si possa ser um shorthand)</strong>, com os comandos, na ordem:</strong></p>
+        <ul>
+            <strong>
+                <li>border-top-left-radius:</li>
+                <li>border-top-right-radius:</li>
+                <li>border-bottom-right-radius:</li>
+                <li>border-bottom-left-radius:</li>
+            </strong>
+        </ul>
+    </div>
+</body>
+</html>
