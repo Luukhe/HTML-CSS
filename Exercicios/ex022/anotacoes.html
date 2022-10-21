@@ -12,8 +12,16 @@
 
     <p><strong>VALE LEMBRAR QUE:</strong>, como usado no exemplo da página "fundo004", para o BODY ser usado como exemplo para treinar posicionamento de imagem, é preciso AUMENTAR a altura do mesmo, pois, por padrão, quando só existe puramente o body (não tendo conteúdo nele), ele não terá nenhuma altura e ficará "chapado" no topo, fazendo com que a imagem não possa ser realocada <strong>(REPETINDO: ISSO SE CASO O BODY SEJA USADO PARA EXERCICIO DE POSICIONAMENTO DE IMAGEM, COMO FOI ACONTECEU NA PÁGINA EXEMPLO "FUNDO004").</strong></p>
 
+    <p><strong>****OUTRA DICA MUITO LEGAL:</strong> nos exemplos 4 e 5, foi usado um HEIGHT usando <strong>"100vh"</strong> como medida. Esse "vh" quer dizer <strong>VIEW HEIGHT</strong>, que corresponderá à <strong>ALTURA DA VIEWPORT</strong>, ou seja, terá um height de 100% da viewport que estiver sendo utilizada <strong>(foi usado no body, o que quer dizer que o body sempre ocupará 100% em qualquer viewport)</strong></p>
+
     <p><strong>TAMBÉM VIMOS O "background-size"</strong>, o qual o nome propriamente diz, podemos definir o tamanho da imagem do background. <strong>(USADO NO EXEMPLO "FUNDO004")</strong></p>
 
-    <p><strong>****OUTRA DICA MUITO LEGAL:</strong> nos exemplos 4 e 5, foi usado um HEIGHT usando <strong>"100vh"</strong> como medida. Esse "vh" quer dizer <strong>VIEW HEIGHT</strong>, que corresponderá à <strong>ALTURA DA VIEWPORT</strong>, ou seja, terá um height de 100% da viewport que estiver sendo utilizada <strong>(foi usado no body, o que quer dizer que o body sempre ocupará 100% em qualquer viewport)</strong></p>
+    <p><strong>DICA SOBRE O BACKGROUND-SIZE:</strong> pode-se também usar "background-size: 100% 100%;". Esses valores são os valores de HEIGHT e WIDTH da imagem, ou seja, diz-se que a imagem ocupará 100% da altura e 100% da largura de onde ela estiver <strong>(EXEMPLO USADO NA PÁGINA FUNDO006).</strong> e, se combinado (no body, por exemplo) com height: 100vh, fará com que a imagem seja 100% ocupada no body inteiro. <strong>MAS, ISSO CAUSA UM EFEITO INDESEJÁVEL, POIS POR MAIS QUE A IMAGEM OCUPE TODO O BODY, ELA FICARÁ DISTORCIDA/ACHATADA AO MUDAR O TAMANHO DA TELA.</strong></p>
+
+    <p><strong>*****MUITÍSSIMO IMPORTANTE SOBRE O BACKGROUND-SIZE (EXEMPLO USADO NA PÁGINA FUNDO006):</strong> por padrão, o background-size é "auto". Porém, podemos usar também outros dois <strong>valores escritos</strong> que são MUITO IMPORTANTES, que são:</p>
+    <ul>
+        <li><strong>CONTAIN:</strong> Ele faz com que a imagem 100% exibida, sem ter corte nenhum na imagem e sem distorcer/achatar a imagem. Mas, isso pode criar barras laterais/verticais ao mudar a resolução/tamanho da tela, isso no esforço de exibir 100% da imagem na tela.</li>
+        <li><strong>COVER:</strong> Irá <strong>cobrir</strong> a tela inteira com a imagem, mesmo que com isso ele tenha que cortar parte da imagem exibida (para que não hajam barras laterais ou distorcimento da imagem, acredito eu...). Então, ele fará caber <strong>independente do tamanho da tela</strong>, cortando a imagem em função do tamanho da tela.</li>
+    </ul>
 </body>
 </html>
