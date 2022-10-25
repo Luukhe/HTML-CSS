@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anotações</title>
+    <title>Anotações sobre BACKGROUND</title>
 </head>
 <body>
-    <h1>PÁGINA VOLTADA PARA ANOTAÇÕES MINHAS APÓS OS EXEMPLOS</h1>
+    <h1>PÁGINA VOLTADA PARA ANOTAÇÕES MINHAS SOBRE BACKGROUND APÓS OS EXEMPLOS</h1>
     <p>O brackground image, por padrão, sempre repetirá a imagem contida no container <strong>(PODENDO SER CONFIGURADO USANDO: "background-repeat")</strong>. E, por padrão também sempre começará no posicionamento TOP LEFT, podendo ser configurado usando o <strong>background-position (top, top center, bottom, bottom right, right etc)</strong>. Isso definirá <strong>POR ONDE A IMAGEM SERÁ "ANCORADA"</strong>, ou seja, por que parte a imagem terá o seu "foco" e será "começada".</p>
 
     <p><strong>VALE LEMBRAR QUE:</strong>, como usado no exemplo da página "fundo004", para o BODY ser usado como exemplo para treinar posicionamento de imagem, é preciso AUMENTAR a altura do mesmo, pois, por padrão, quando só existe puramente o body (não tendo conteúdo nele), ele não terá nenhuma altura e ficará "chapado" no topo, fazendo com que a imagem não possa ser realocada <strong>(REPETINDO: ISSO SE CASO O BODY SEJA USADO PARA EXERCICIO DE POSICIONAMENTO DE IMAGEM, COMO FOI ACONTECEU NA PÁGINA EXEMPLO "FUNDO004").</strong></p>
@@ -25,5 +25,21 @@
     </ul>
 
     <p>Então, background-size aceita valores: auto (padrão), tamanho fixo em píxels, tamanho em porcentagem da tela, e os valores contain e cover.</p>
+
+    <p><strong>SOBRE "BACKGROUND-ATTACHMENT":</strong> Uma propriedade <strong>MUITÍSSIMO IMPORTANTE</strong> que, combinado ao background-size com o valor <strong>cover</strong>, gera resultados muito interessantes. <strong>POR PADRÃO, O BACKGROUND-ATTACHMENT VEM COM O VALOR "SCROLL", QUE FARÁ COM QUE O FUNDO (inclusive a imagem) ROLE JUNTO COM O CONTEÚDO.</strong> Como visto no exemplo da página (antes do attachment ser explicado) "FUNDO006", o background-size por si só pode gerar bons resultados, <strong>mas ele sozinho ainda não é o suficiente</strong> pois, apenas com ele, se o conteúdo do meu site for muito grande (tiver uma rolagem vertical bem grande) a imagem em algum ponto terá que se repetir, pois a rolagem será maior do que a imagem em si (ou, se caso estiver configurado um background-repeat: no-repeat, a imagem não se repetirá e ficará aparecendo o fundo, no caso, o main). <strong>PARA ISSO, É MUITO INTERESSANTE COMBINAR O BACKGROUND-SIZE COM O BACKGROUND-ATTACHMENT.</strong></p>
+    <p><strong>VALOR FIXED:</strong> Combinando com o <strong>background-attachment: fixed (VALOR FIXED)</strong>, como o nome já sugere, <strong>O FUNDO FICARÁ FIXADO ENQUANTO O CONTEÚDO FAZ A ROLAGEM</strong>, o que gera o resultado perfeito para sites (a maioria dos sites, penso eu) que tem a proposta nesse estilo (de imagem de fundo fixada, e a rolagem apenas do conteúdo).</p>
+    <p><strong>LOGO:</strong> conseguimos com o background-size, com o valor <strong>COVER</strong> fazer com que a imagem cubra o fundo inteiro sem afetar as "dimensões" dela (sem achatar, distorcer etc), e junto ao background-attachment com o valor <strong>FIXED</strong>, que a imagem seja fixada ao fundo e <strong>APENAS O CONTEÚDO FAÇA A ROLAGEM</strong>, fazendo com que não haja repetição ou que ocorra o fim da imagem!</p>
+
+    <p><strong>SHORTHAND BACKGROUND:</strong></p>
+    <ol>
+        <li>COLOR</li>
+        <li>IMAGE</li>
+        <li>POSITION</li>
+        <li>REPEAT</li>
+        <li>[SIZE] OBSERVAÇÃO IMPORTANTE SOBRE A SEGUIR</li>
+        <li>ATTACHMENT</li>
+    </ol>
+    <p><strong>NOTA IMPORTANTE:</strong> Não sei o porquê, mas inicialmente o shorthand não funcionou. Procurei nos comentários do vídeo da aula, e a forma que encontrei e funcionou foi TROCANDO A ORDEM DO SIZE E DO REPEAT E adicionando uma BARRA entre o POSITION e o SIZE.</p>
+    <p>A propriedade que "buga" é o <strong>COVER</strong>. Resolvendo, podemos fazer da forma acima, ou retirar a propriedade cover do shorthand e colocá-lo separadamente.</p>
 </body>
 </html>

@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
 
     <style>
         body {
             height: 100vh;
-            background-image: url('imagens/wallpaper002.jpg');
+
+            /*background-image: url('imagens/wallpaper002.jpg');
             background-color: black;
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;*/
+
+            /*Shorthand - Background
+            ORDEM:
+
+            1 - COLOR
+            2 - IMAGE
+            3 - POSITION
+            4 - REPEAT
+            5 - [SIZE]
+            6 - ATTACHMENT
+
+            (Não sei o porquê, mas o shorthand inicialmente não funcionou. Procurei nos comentários do vídeo da aula, e a forma que funcionou foi TROCANDO A ORDEM DO SIZE E DO REPEAT E adicionando uma BARRA entre o POSITION e o SIZE)
+            */
+
+            background: black url('imagens/wallpaper002.jpg') center center/cover no-repeat fixed;
         }
 
         main {
             background-color: white;
             border-radius: 15px;
-            width: 450px;
+            max-width: 550px;
             padding: 10px;
             margin: auto;
             border: 1px solid black;
@@ -30,6 +47,10 @@
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum qui doloribus ipsa ducimus maxime quae libero eum minus. Vel fugiat nulla corporis fugit, perspiciatis unde molestiae voluptatibus hic saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, rerum reprehenderit quia vitae tenetur, tempora doloribus facere assumenda asperiores dolores odio possimus nobis doloremque repudiandae animi qui odit id. Laborum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reprehenderit iste ducimus ipsam esse placeat voluptate optio. At, non quo totam incidunt maiores laboriosam debitis sit excepturi, assumenda aspernatur officia!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum qui doloribus ipsa ducimus maxime quae libero eum minus. Vel fugiat nulla corporis fugit, perspiciatis unde molestiae voluptatibus hic saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, rerum reprehenderit quia vitae tenetur, tempora doloribus facere assumenda asperiores dolores odio possimus nobis doloremque repudiandae animi qui odit id. Laborum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reprehenderit iste ducimus ipsam esse placeat voluptate optio. At, non quo totam incidunt maiores laboriosam debitis sit excepturi, assumenda aspernatur officia!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum qui doloribus ipsa ducimus maxime quae libero eum minus. Vel fugiat nulla corporis fugit, perspiciatis unde molestiae voluptatibus hic saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, rerum reprehenderit quia vitae tenetur, tempora doloribus facere assumenda asperiores dolores odio possimus nobis doloremque repudiandae animi qui odit id. Laborum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reprehenderit iste ducimus ipsam esse placeat voluptate optio. At, non quo totam incidunt maiores laboriosam debitis sit excepturi, assumenda aspernatur officia!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum qui doloribus ipsa ducimus maxime quae libero eum minus. Vel fugiat nulla corporis fugit, perspiciatis unde molestiae voluptatibus hic saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, rerum reprehenderit quia vitae tenetur, tempora doloribus facere assumenda asperiores dolores odio possimus nobis doloremque repudiandae animi qui odit id. Laborum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reprehenderit iste ducimus ipsam esse placeat voluptate optio. At, non quo totam incidunt maiores laboriosam debitis sit excepturi, assumenda aspernatur officia!</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum qui doloribus ipsa ducimus maxime quae libero eum minus. Vel fugiat nulla corporis fugit, perspiciatis unde molestiae voluptatibus hic saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, rerum reprehenderit quia vitae tenetur, tempora doloribus facere assumenda asperiores dolores odio possimus nobis doloremque repudiandae animi qui odit id. Laborum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reprehenderit iste ducimus ipsam esse placeat voluptate optio. At, non quo totam incidunt maiores laboriosam debitis sit excepturi, assumenda aspernatur officia!</p>
     </main>
 </body>
