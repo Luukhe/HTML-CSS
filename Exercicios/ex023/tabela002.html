@@ -16,14 +16,31 @@
             width: 500px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
         th, td {
             border: 1px solid black;
             padding: 10px;
         }
 
         thead, tfoot {
-            background-color: grey;
+            background-color: rgb(37, 37, 37);
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(37, 37, 37);
         }
 
         .num {
@@ -37,6 +54,7 @@
     <!--
         ANATOMIA PARA GABELAS GRANDES
         TABLE
+            CAPTION
             THEAD
                 tr, td, th
             TBODY
@@ -46,11 +64,12 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da população total</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+                <th scope="col" style="width: 50px;">% da população total</th>
             </tr>
         </thead>
 
@@ -105,15 +124,40 @@
                 <td class="num">7 338 473</td>
                 <td class="num">3,4%</td>
             </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 206 589</td>
+                <td class="num">3,4%</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 153 262</td>
+                <td class="num">3,4%</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 269 995</td>
+                <td class="num">2,0%</td>
+            </tr>
         </tbody>
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>00000</strong></td>
                 <td class="num">00000%</td>
             </tr>
         </tfoot>
     </table>
+
+    <p><strong>Lorem criado para visualização do efeito de fixação do cabeçalho</strong></p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iure sunt quo, distinctio minus ad? Nemo eos, quod hic impedit culpa est fugit, tempore veniam dicta perferendis odit ducimus nihil! Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestias ipsa enim ex omnis asperiores adipisci voluptatem suscipit cumque? Esse, adipisci ratione laborum impedit fugit provident. Beatae optio sequi ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum soluta nobis suscipit minus ullam voluptate voluptatem, itaque ad repudiandae non illum optio, voluptatum placeat, vero corporis fuga! Minus, repudiandae ex? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti molestiae enim dolorem quasi quas molestias blanditiis nobis sed eius nam nesciunt iure illum, optio, suscipit at necessitatibus esse expedita placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae voluptatem dolore ut, autem quas deserunt quae illum vitae. Blanditiis odit deserunt dolore ipsam explicabo eligendi facilis corporis voluptates est.</p>
 </body>
 </html>
