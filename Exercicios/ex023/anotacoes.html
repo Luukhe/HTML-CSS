@@ -80,5 +80,23 @@
     </ul>
 
     <p><strong>NOTA IMPORTANTE: Até então, para que uma célula possa "expandir" e ocupar outra célula, a célula a ser OCUPADA precisará ser <ins>RETIRADA</ins> do código. Isso também fará com que as células seguintes ocupem o lugar da célula antiga retirada (isso se houver alguma célula após a célula retirada, MAS, voltará ao lugar de origem caso a célula colocada para ocupar mais de uma, venha de fato ocupar).</strong></p>
+
+    <p><strong>SOBRE ESCOPOS DE GRUPO:</strong> Além de apenas definirmos o escopo de um "th", deve-se também especificar se o mesmo é responsável por <strong>mais de uma linha ou coluna</strong>. Logo, caso determinado "TH" seja escopo de <strong>UM OU MAIS LINHA OU COLUNA,</strong> devemos designá-lo da seguinte maneira:</p>
+    <ul>
+        <li><strong>scope="colgroup"</strong> para o título ("th") responsável de MAIS DE UMA COLUNA</li>
+        <li><strong>scope="rowgroup"</strong> para o título ("th") responsável por MAIS DE UMA LINHA</li>
+    </ul>
+    <p><strong>DEIXANDO CLARO QUE SCOPE SÓ SE USA EM "TH"!</strong></p>
+
+    <p><strong>***NOVAS TAGS SOBRE TABELAS (EXEMPLOS NA PAGINA TABELA005):</strong> Duas novas tags foram citadas que dizem respeito às tabelas, mais precisamente sobre <strong>como destacar/personalizar COLUNAS INTEIRAS</strong> (pois, para destacar/personalizar linhas inteiras é bem mais simples, cria-se uma class e atribui-se na "TR" desejada), que são:</p>
+    <ul>
+        <li><strong>colgroup:</strong> Além de existir "colgroup" para designar escopos, também existe como tag, e serve justamente para designarmos o <strong>grupo de colunas existentes</strong> dentro da tabela <strong>(TRABALHA JUNTAMENTE COM A TAG "COL" A SEGUIR)</strong>.</li>
+        <li><strong>col:</strong> Da mesma forma que o "colgroup", também existe uma tag "col". Essa tag <strong>(que é para ser utilizada DENTRO/INDENTADA da/na tag "colgroup")</strong> servirá para designarmos <strong>QUAL COLUNA queremos personalizar, destacar etc</strong>. Cada "col" dentro do "colgroup" diz respeito às colunas da tabela individualmente (se caso a tabela tenha 5 colunas e apenas um "col", dessa forma, a tag estará se referindo apenas à primeira coluna da tabela. Tendo então cinco cols, poderemos personalizar qualquer uma delas atribuindo classes, sendo cada col responsável respectivamente por cada coluna).</li>
+    </ul>
+    <p>Sendo assim, se quiséssemos destacar/personalizar apenas a última coluna de uma tabela, teriamos que incluir dentro do colgroup todas as colunas em forma de tag "col" até chegarmos no número da última que queremos personalizar. <strong>PORÉM...</strong></p>
+    <p><strong>***IMPORTANTE SOBRE A PROPRIEDADE "SPAN" (DENTRO DAS TAGS "COL"):</strong></p>
+    <p><strong>Span</strong>, além de uma tag <strong>também é uma propriedade utilizada para as tags "col"</strong> que, de forma similar às propriedades "colspan" e "rowspan" (que funcionam para mesclar e expandir uma célula), funcionará para designar <strong>mais de uma coluna por vez.</strong> Uma tag "col" que tenha a propriedade <strong>span="2"</strong>, estará se refirindo à própria coluna <strong>e à PRÓXIMA TAMBÉM (totalizando 2 colunas)</strong>.</p>
+    <p>Logo, se uma tabela, por exemplo, possuir 20 colunas e queremos atribuir uma classe igual a todas elas, não será preciso escrever manualmente a classe em cada uma das colunas, pode-se usar: <strong>col class="x" span="20"</strong>. Assim, a mesma class será atribuida a <strong>todas as 20 colunas simultaneamente, pois o span quer dizer que estará se referindo a todas as 20 colunas.</strong></p>
+    <p>Da mesma forma, se uma tabela possuir as mesmas 20 colunas e queremos personalizar <strong>apenas a última coluna</strong>, não haverá necessidade de escrever 19 linhas de tags de col para personalizar apenas a última tag. Pode-se fazer apenas: <strong>col span="19" (sem nenhuma class, que é justamente para pular 19 colunas)</strong> e então escrever a última coluna: <strong>col class="x"</strong>, fazendo assim a personalização apenas na última coluna.</p>
 </body>
 </html>
