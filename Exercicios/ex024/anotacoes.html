@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre iframes</title>
+</head>
+<body>
+    <h1>Anotações sobre iframes</h1>
+
+    <p><strong>PRIMEIRAMENTE:</strong> o iframe é uma estrutura (que parece um quadro)<strong><ins>INLINE</ins></strong> (sim, se formos ver o tipo de display dele, será inline) que serve para <strong>CRIARMOS UMA "JANELA", COMO SE FOSSE UMA ABA NOVA</strong> que estará DENTRO da caixa do iframe. Para isso, é necessário colocarmos o "link" dentro do parâmetro "src" e, por padrão, o iframe virá também com o parâmetro 'frameborder="0"' <strong>(TUDO ESTÁ CONTIDO NA PÁGINA DE EXEMPLO iframe001)</strong>.</p>
+
+    <p><strong>NOTA:</strong> Existem alguns sites que BLOQUEIAM o uso de iframes por terceiros, como exemplificado no exemplo de página "iframe001", onde usamos o site do google para tentar colocar no iframe.</p>
+    <p><strong>NOTA 2:</strong> Alguns navegadores de celular <strong>não possuem suporte ao iframe</strong>. Sendo assim, uma boa maneira de contornar isso, seria <strong>entre a abertura e o fechamento da tag, ou seja, DENTRO da tag MESMO (que nem nas aulas sobre vídeo),</strong> colocarmos um LINK para a página em questão.</p>
+
+    <p><strong>SOBRE O FRAMEBORDER:</strong> O frameborder simplesmente só aceita dois valores, que são 0 e 1. O número "zero" seria para sem borda, e o número "um" com borda (qualquer outro valor acima de 1, será indiferente pois contará como 1).</p>
+    <p><strong>(Podemos facilmente personalizar a borda com o parâmetro "border" sem problemas)</strong></p>
+
+    <p><strong>SOBRE TAMANHOS DE IFRAME:</strong> O tamanho padrão do iframe é de <strong>300x150 (300 de largura e 150 de altura).</strong> Porém, logicamente, também conseguimos alterar a altura e largura dos iframes <strong>indo diretamente na tag e atribuindo um "height" e "width" que desejarmos.</strong> OU, também podemos <strong><ins>usar css para alterarmos o tamanho, que nesse caso, o css terá prioridade sobre a propriedade inline.</ins></strong></p>
+
+    <p><strong>SOBRE ROLAGEM NO IFRAME:</strong> Podemos também configurar a rolagem (caso haja) do iframe, usando o parâmetro <strong>"scrolling"</strong>, que possui 3 valores:</p>
+    <ul>
+        <li><strong>AUTO:</strong> É o valor padrão do parâmetro</li>
+        <li><strong>YES:</strong> Mesmo que o conteúdo esteja cabendo inteiro dentro do iframe, ainda assim apareceria barra de rolagem</li>
+        <li><strong>NO:</strong> Exclui a rolagem do iframe mesmo que o conteúdo seja maior</li>
+    </ul>
+</body>
+</html>
