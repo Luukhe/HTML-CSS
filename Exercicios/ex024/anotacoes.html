@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </head>
 <body>
     <h1>Anotações sobre iframes</h1>
@@ -24,6 +29,16 @@
         <li><strong>AUTO:</strong> É o valor padrão do parâmetro</li>
         <li><strong>YES:</strong> Mesmo que o conteúdo esteja cabendo inteiro dentro do iframe, ainda assim apareceria barra de rolagem</li>
         <li><strong>NO:</strong> Exclui a rolagem do iframe mesmo que o conteúdo seja maior</li>
+    </ul>
+
+    <p><strong>CONTEÚDOS LOCAIS NO IFRAME:</strong> Para utilizarmos conteúdos próprios nos iframes, simplesmente colocamos o link da nossa página dentro do "src" (como foi utilizado no exemplo de página iframe002).</p>
+
+    <p><strong>**** MUITÍSSIMO IMPORTANTE - COMO FAZER UM IFRAME NAVEGAR ENTRE DIVERSAS PÁGINAS (ex: iframe003):</strong> Para fazermos com que um iframe navegue (mostre) entre outras páginas ao clicarmos em determinados links na página, precisamos fazer com que <strong>o iframe tenha um parâmetro chamado "name", onde literalmente devemos nomeá-lo</strong>. Já os links <strong>precisarão usar o TARGET e, no valor do target, colocar o nome que foi atribuido no name do iframe!</strong></p>
+    <p><strong>***IMPORTANTE:</strong> Normalmente, mesmo as páginas já estando configuradas para serem mostradas no iframe quando clicadas no link, assim que a página for aberta (no caso, até se der um F5), por padrão, não será mostrado nada no iframe pois nada ainda terá sido selecionado, logo, assim que a página for carregada, será só um iframe vazio.</p>
+    <p><strong>SENDO ASSIM, PODEMOS USAR AS ALTERNATIVAS:</strong></p>
+    <ul>
+        <li><strong>usar o "src":</strong> pode-se simplesmente colocar algum link no "src" do iframe</li>
+        <li><strong>*NOVO PARÂMETRO "srcdoc":</strong> Esse é um parâmetro bem <strong>peculiar</strong>, pois é um parâmetro que <strong><ins>ACEITA LINHAS DE CÓDIGO HTML COMO VALOR!!!!!!!!</ins></strong> (podendo assim, colocarmos h1, parágrafos e até img)</li>
     </ul>
 </body>
 </html>
