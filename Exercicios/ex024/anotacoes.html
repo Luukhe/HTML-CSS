@@ -40,5 +40,16 @@
         <li><strong>usar o "src":</strong> pode-se simplesmente colocar algum link no "src" do iframe</li>
         <li><strong>*NOVO PARÂMETRO "srcdoc":</strong> Esse é um parâmetro bem <strong>peculiar</strong>, pois é um parâmetro que <strong><ins>ACEITA LINHAS DE CÓDIGO HTML COMO VALOR!!!!!!!!</ins></strong> (podendo assim, colocarmos h1, parágrafos e até img)</li>
     </ul>
+
+    <p><strong>DICA IMPORTANTE (exemplo na página iframe004):</strong> Para deixarmos os iframes mais seguros em relação a ataques de outros sites, no que diz respeito à captação de dados <strong>coloca-se DENTRO DO IFRAME -sandbox="sandbox"-, sim, parâmetro sandbox com valor sandbox.</strong> Isso fará com que haja uma proteção maior sob outros sites para que eles não capturem dados de um formulário, por exemplo, facilmente!</p>
+    <p><strong>OUTRO PARÂMETRO PARA AJUDAR:</strong> Um outro parâmetro <strong>(referrerpolicy="no-referrer")</strong> também serve para ajudar a proteger. Quando esse parâmetro é usado, quer dizer que os dados carregados dentro do iframe <strong>NÃO coletará nenhum tipo de informação do usuário para mecanismos de captura de dados de PROPAGANDA.</strong></p>
+    <p><strong>IMPORTANTE - CONFIGURANDO SANDBOX:</strong> Quando o parâmetro SANDBOX recebe o valor SANDBOX, ele bloqueará qualquer tipo de página para que não coletem os dados, <strong>incluindo páginas próprias, nossas mesmo, do próprio servidor</strong>. <br>
+    Sendo assim, para que o iframe possa continuar protegido mas <strong>com "autorização" de coletar dados no iframe (levando em conta que a página no iframe seja do próprio servidor, localmente) é necessário usar os seguintes valores <ins>(dentro do parâmetro SANDBOX)</ins>:</strong>
+    </p>
+    <ul>
+        <li><strong>allow-same-origin:</strong> Permite conteúdos <strong>DE MESMA ORIGEM</strong>, ou seja, localmente.</li>
+        <li><strong>allow-forms:</strong> Literalmente como o valor traduz, <strong>permite formulários</strong></li>
+        <li><strong>allow-scripts:</strong> Como o HTML5 executa scripts quando executa formulários (como foi no exemplo em questão, do iframe004), <strong>o valor permite executar formulários</strong></li>
+    </ul>
 </body>
 </html>
