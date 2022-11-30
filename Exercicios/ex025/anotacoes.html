@@ -9,11 +9,37 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            text-indent: 15px;
         }
     </style>
 
 </head>
 <body>
     <h1>SOBRE FORMULÁRIOS</h1>
+    <p>Todo formulário tem que estar entre as tags <strong>FORM</strong>. Já um adendo: nem sempre funcionar é a melhor forma de fazer, o jeito que o primeiro exemplo será feito não está 100% bom, está <strong>funcional, mas não 100% bom (palavras do professor).</strong></p>
+
+    <p><strong>***SOBRE INPUTS:</strong> No exemplo (formulario01) foi usada a tag INPUT, dentro da tag form, dentro da tag parágrafo para <strong><ins>APARECER AQUELA CAIXINHA DE DIGITAR INFORMAÇÃO e CAPTAR</ins> os dados de nome e sobrenome do exemplo. Existem MUITOS tipos de input para diferentes finalidades <strong>(pelo que eu entendi, normalmente os inputs vêm com a informação desejada)</strong>, mas o que foi usado foi o INPUT TEXT (caixa de texto).</strong> Assim:</p>
+
+    <pre>
+        <strong>
+            <code>
+                &lt;form&gt;
+                    &lt;p&gt;Nome: &lt;input type="text" name="nome" id="nome"&gt;&lt;/p&gt;
+                    &lt;p&gt;Sobrenome: &lt;input type="text" name="sobrenome" id="sobrenome"&gt;&lt;/p&gt;
+                &lt;/form&gt;
+            </code>
+        </strong>
+    </pre>
+
+    <p><strong>**INPUT TEXT:</strong> Toda caixa de texto precisa ter <strong>NOME</strong> e <strong>ID.</strong></p>
+
+    <p><strong>**INPUT SUBMIT:</strong> Como já sugere o nome, <strong>cria um botão de submit para o formulário. (da mesma forma que o input text, também foi colocado dentro de um parágrafo).</strong> <br>
+    <strong>**É IMPORTANTE RESSALTAR QUE:</strong> quando a tag imput submit for usada, virá junto dela um parâmetro <strong>"VALUE", que é justamente onde devemos colocar o conteúdo escrito que queremos dentro do botão (EXEMPLO: Enviar)</strong>.</p>
+
+    <p><strong>DICA LEGAL PARA O FORM:</strong> Para desligarmos as sugestões de nomes que aparecem nos campos quando clicamos, usa-se o parâmetro <strong>"autocomplete=off" na tag form</strong>.</p>
+    <p><strong>*****MUITÍSSIMO IMPORTANTE SOBRE O FORM:</strong> Os dados inseridos dentro de um formulário normalmente são mandados <strong>para alguma linguagem de programação</strong>, que irá variar de acordo com a linguagem usada para receber os dados do formulário (o professor no exemplo formulario01 usou a linguagem ou extensão .php). E para isso, <strong>usa-se um parâmetro que já vem por padrão no FORM chamado <ins>** action="cadastro.js" **</ins></strong>, sendo "registro.js" um <strong>SCRIPT</strong> a ser criado posteriormente, um programa para poder cadastrar os dados. <strong>E é assim que fazemos para enviar os dados de um formulário (action do form e botão de submit).</strong></p>
+
+    
 </body>
 </html>
