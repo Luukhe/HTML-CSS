@@ -10,7 +10,8 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             text-align: justify;
-            text-indent: 15px;
+            width: 70vw;
+            margin: auto;
         }
     </style>
 
@@ -32,7 +33,7 @@
         </strong>
     </pre>
 
-    <p><strong>**INPUT TEXT:</strong> Toda caixa de texto precisa ter <strong>NOME</strong> e <strong>ID.</strong></p>
+    <p><strong>**INPUT TEXT:</strong> Toda caixa de texto precisa ter <strong>NOME</strong> e <strong>ID.</strong> A diferença entre o "name" e o "id" nesse caso, será a <strong>identificação feita por cada linguagem.</strong> Em um caso, linguagens como <strong>PHP e HTML usam mais do "name" para a identificação do input</strong>, enquanto, em outro caso, linguagens como <strong>JavaScript o "ID" será mais utilizado <ins>(inclusive para o uso do label também)</ins>.</strong> Logo, é <strong><ins>extremamente necessário identificar todos os campos de entrada.</ins></strong></p>
 
     <p><strong>**INPUT SUBMIT:</strong> Como já sugere o nome, <strong>cria um botão de submit para o formulário. (da mesma forma que o input text, também foi colocado dentro de um parágrafo).</strong> <br>
     <strong>**É IMPORTANTE RESSALTAR QUE:</strong> quando a tag imput submit for usada, virá junto dela um parâmetro <strong>"VALUE", que é justamente onde devemos colocar o conteúdo escrito que queremos dentro do botão (EXEMPLO: Enviar)</strong>.</p>
@@ -40,6 +41,46 @@
     <p><strong>DICA LEGAL PARA O FORM:</strong> Para desligarmos as sugestões de nomes que aparecem nos campos quando clicamos, usa-se o parâmetro <strong>"autocomplete=off" na tag form</strong>.</p>
     <p><strong>*****MUITÍSSIMO IMPORTANTE SOBRE O FORM:</strong> Os dados inseridos dentro de um formulário normalmente são mandados <strong>para alguma linguagem de programação</strong>, que irá variar de acordo com a linguagem usada para receber os dados do formulário (o professor no exemplo formulario01 usou a linguagem ou extensão .php). E para isso, <strong>usa-se um parâmetro que já vem por padrão no FORM chamado <ins>** action="cadastro.js" **</ins></strong>, sendo "registro.js" um <strong>SCRIPT</strong> a ser criado posteriormente, um programa para poder cadastrar os dados. <strong>E é assim que fazemos para enviar os dados de um formulário (action do form e botão de submit).</strong></p>
 
-    
+    <p><strong>***IMPORTANTE; INCONVENIÊNCIAS:</strong> O navegador em si não sabe que <strong>o campo (a caixa onde digitamos a informação) está ligado aos nomes "Nome, Sobrenome" que colocamos</strong> e, é muito importante que que essa ligação exista para denominarmos o que cada campo de informação significa.</p>
+    <p><strong>**PARA FAZERMOS ESSA LIGAÇÃO USAMOS A TAG <ins>"LABEL"</ins>:</strong> Os labels, como o nome sugere, irão <strong>"etiquetar"</strong> os nomes que demos aos campos de informação e farão a ligação entre os nomes dados e o campo de dados (Exemplo: Nome e Sobrenome, do exercicio formulario01). Deve-se colocar as palavras "Nome" e "Sobrenome" <strong>DENTRO DA TAG LABEL</strong> e, a tag virá com o <strong><ins>parâmetro "for" (para quem será o label)</ins>, que é justamente onde <ins>devemos colocar o ***ID***</ins> dado ao input, para que possamos fazer a ligação entre o nome e o campo.</strong> <br>
+    <strong>NOTA IMPORTANTE: <ins>SEMPRE devemos usar label para fazer a relação entre qual é o objeto de formulário e qual é a etiqueta dele. Deve-se sempre relacionar um ao outro.</ins></strong>
+    </p>
+
+    <p><strong>*SOBRE PARA ONDE VÃO OS DADOS ENVIADOS*:</strong> Na aula, o professor mostrou para onde são enviados os dados digitados nos campos (mesmo o script não funcionando). <strong>As informações estão contidas <ins>NO LINK!!</ins></strong> Quando colocamos as informações nos campos e clicamos em enviar, analisando o link, pode-se notar que as informações colocadas nos campos foram parar ali. <br>
+    <strong>Exemplo: ex025/registro.js?nome=Lucas&sobrenome=Vargas</strong> <br>
+    Assim que clicamos no botão enviar, pode-se notar que o script <strong>(registro.js) é chamado</strong>, logo depois uma <strong>INTERROGAÇÃO,</strong> que servirá para <strong>dividir o endereço do arquivo que foi aberto, dos parâmetros extras que foram enviados</strong> que, no caso, foram enviados dois parâmetros: <strong><ins>nome=Lucas&sobrenome=Vargas</ins></strong> (esse "&" tem a mesma função de "E" normal mesmo: parâmetro "nome=Lucas", e parâmetro "sobrenome=Vargas"). <strong>Isso tudo é um padrão de envio de formulários.</strong> <br>
+    <strong>NOTA - MÉTODOS DE ENVIO ATRAVÉS DE FORMULÁRIOS:</strong> Existem dois <strong>métodos</strong> que são métodos simples para envios de formulário <strong>(o método é um parâmetro "method" que pode ser colocado no FORM)</strong>:
+    <ul>
+        <li><strong>method="GET":</strong> Esse é o primeiro método e é o método padrão, que é o qual já estamos utilizando (o método que aparece no link os dados colodados nos campos). <strong>NOTA: É utilizado quando os dados NÃO forem sensíveis. Só deve ser usado até 3 mil bytes. Não deve ser usado para envios de FOTOS ou qualquer outro tipo de arquivo.</strong></li>
+        <br>
+        <li><strong>method="POST":</strong> Esse método irá <strong>esconder os parâmetros nos links</strong>. Ou seja, os dados colocados nos campos do formulário não aparecerão no link. <strong><ins>PS: ISSO NÃO TORNA NADA MAIS SEGURO</ins>.</strong> <strong>NOTA: É utilizado quando forem DADOS SENSÍVEIS. Utilizado para dados de mais de 3 mil bytes. Utilizado para ENVIO DE ARQUIVOS.</strong></li>
+    </ul>
+    </p>
+
+    <p><strong>**IMPORTANTE - SOBRE CAMPOS VAZIOS:</strong> Normalmente, se os campos de dados de um formulário estiverem vazios e a pessoa clicar em enviar, <strong>os dados SERÃO enviados</strong>, e isso não pode acontecer, não é algo interessante. <br>
+    Para que isso não aconteça, precisamos fazer com que os campos sejam <strong><ins>obrigatórios</ins></strong>. Fazemos isso simplesmente adicionando um parâmetro <strong>DENTRO DO INPUT DO DADO</strong>, parâmetro: <strong><ins>required</ins></strong>.
+    </p>
+
+    <p><strong>**IMPORTANTE - SOBRE CARACTÉRES MINIMOS OU MÁXIMOS:</strong> Já nos deparamos com diversos sites em que no cadastro do site, era requerido um número <strong>mínimo de caractéres</strong>, e/ou que havia um número <strong>máximo de caractéres</strong>, seja para usuário ou senha. Isso pode ser feito usando <strong>DOIS PARÂMETROS:</strong></p>
+    <ul>
+        <li><strong>minlenght:</strong> Parâmetro para ser usado <strong>DENTRO DO INPUT DO DADO DESEJADO</strong> para determinar o <strong>mínimo de caractéres</strong> que o dado precisa ter.</li>
+        <li><strong>maxlenght:</strong> Parâmetro para ser usado <strong>DENTRO DO INPUT DO DADO DESEJADO</strong> para determinar o <strong>máximo de caractéres</strong> que o dado precisa ter.</li>
+        
+        <p><strong>Também é interessante saber os seguintes parâmetros:</strong></p>
+        
+        <li><strong>size="":</strong> Pode-se também definir o <strong>tamanho da caixa</strong> onde colocamos o dado. O valor colocado será o <strong>valor do tamanho de caractéres (exemplo: um "size com valor 10, a caixa terá um tamanho de 10 caractéres"). <br>
+         PS: não é porque o valor de uma caixa é de 10 caractéres que ele não aceitará passar de 10, o valor do size será apenas o tamanho. Passando o valor do size, será criado uma rolagem.</strong></li>
+         <li><strong>placeholder:=""</strong> Este é um parâmetro que coloca aquela <strong>dica</strong> do que é necessário escrever no campo, que some quando começamos a escrever <strong>(Exemplo: no campo de usuário quando está em branco, uma dica estará escrita dizendo "nome de usuário", que deverá ser escrito dentro do valor do parâmetro placeholder)</strong>.</li>
+    </ul>
+
+    <p><strong>**DICA MUITO IMPORTANTE - AUTOCOMPLETE NOS INPUTS:</strong> O parâmetro autocomplete usado no form que serve para ligar ou desligar a <strong>sugestão de usuarios</strong> já usados/digitados, também <strong>pode ser usado nos inputs e possuem MUITO mais valores</strong> do que apenas os "on" e "off" do form. Nos inputs, pode-se sugerir <strong>coisas bem mais específicas</strong> que ficaram guardados no navegador, pois <strong>o navegador guarda as informações digitadas em diferentes "categorias"</strong>, podendo assim usar o autocomplete apenas para sugerir coisas específicas já usadas como senhas, número de telefone entre outros dados.</p>
+
+    <p><strong><ins>****TIPOS DE INPUT USADOS ATÉ ENTÃO****:</ins></strong></p>
+    <ul>
+        <li><strong>INPUT TEXT:</strong> Como o nome sugere, usado para textos do tipo <strong>usuarios, nicks, nome, sobrenome etc;</strong></li>
+        <li><strong>INPUT PASSWORD:</strong> Como o nome sugere, usado para <strong>SENHAS</strong>. O texto digitado no input password fica automaticamente oculto (tendo a opçãozinha do olho para mostrar ou ocultar).</li>
+        <li><strong>INPUT SUBMIT:</strong> Como o nome sugere, cria um botão de enviar, que enviará as informações contidas nos outros inputs.</li>
+        <li><strong>INPUT RESET:</strong> Como o nome sugere, cria um botão que irá limpar o que foi digitado nos campos dos inputs.</li>
+    </ul>
 </body>
 </html>
