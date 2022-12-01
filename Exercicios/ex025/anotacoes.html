@@ -81,6 +81,16 @@
         <li><strong>INPUT PASSWORD:</strong> Como o nome sugere, usado para <strong>SENHAS</strong>. O texto digitado no input password fica automaticamente oculto (tendo a opçãozinha do olho para mostrar ou ocultar).</li>
         <li><strong>INPUT SUBMIT:</strong> Como o nome sugere, cria um botão de enviar, que enviará as informações contidas nos outros inputs.</li>
         <li><strong>INPUT RESET:</strong> Como o nome sugere, cria um botão que irá limpar o que foi digitado nos campos dos inputs.</li>
+        <li><strong>INPUT NUMBER:</strong> Como o nome sugere, será um input específico para receber <strong>números.</strong> <br>
+        <strong>NOTA: Input text aceita letras e números. Mas, para um campo onde apenas números devem ser colocados, vem ao caso usar justamente o input number.</strong> <br>
+        <strong>**PARÂMETRO "STEP" PARA O INPUT NUMBER:</strong> Sem esse parâmetro, números "quebrados" não são aceitos. Esse parâmetro dita de <strong>quanto em quanto</strong> o número poderá ser selecionado (Exemplo: step com o valor 0.25, os valores poderão ser escolhidos de 0.25 em 0.25, tipo 5.25, 5.5, 5.75 etc) <br>
+        <strong>NOTA: Com esse valor atribuido, apenas valores de 0.25 em 0.25 serão válidos. Um valor de "5.8", por exemplo, não será válido pois não está no intervalo determinado.</strong> <br>
+        <strong>**PARÂMETRO "VALUE" PARA O INPUT NUMBER:</strong> Esse parâmetro faz com que o valor colocado nele mesmo, seja mostrado inicialmente no campo <strong>(ISSO SOBREPÕE PLACEHOLDER - O VALUE TAMBÉM FUNCIONA PARA DATAS).</strong>
+        </li>
+        <li><strong>INPUT MONTH:</strong> Como o nome sugere, é voltado para escolher o uso de <strong>meses</strong>.</li>
+        <li><strong>INPUT DATE:</strong> Como o nome sugere, cria um input para uma data completa, com direito a um calendarinho pra escolher <strong>(dia/mês/ano).</strong></li>
+        <li><strong>INPUT TIME:</strong> Permite escolher a <strong><ins>hora</ins></strong> desejada pelo usuário.</li>
+        <li><strong>**INPUT DATETIME-LOCAL: <ins>Esse input não foi mostrado na aula com o professor, fui eu mesmo procurando e fuçando que encontrei e achei interessante.</ins></strong>Esse input permitirá que o usuário coloque <strong>data e hora JUNTOS</strong> no mesmo input.</li>
     </ul>
 </body>
 </html>
