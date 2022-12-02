@@ -13,6 +13,10 @@
             width: 70vw;
             margin: auto;
         }
+
+        li {
+            margin-bottom: 15px;
+        }
     </style>
 
 </head>
@@ -91,6 +95,16 @@
         <li><strong>INPUT DATE:</strong> Como o nome sugere, cria um input para uma data completa, com direito a um calendarinho pra escolher <strong>(dia/mês/ano).</strong></li>
         <li><strong>INPUT TIME:</strong> Permite escolher a <strong><ins>hora</ins></strong> desejada pelo usuário.</li>
         <li><strong>**INPUT DATETIME-LOCAL: <ins>Esse input não foi mostrado na aula com o professor, fui eu mesmo procurando e fuçando que encontrei e achei interessante.</ins></strong>Esse input permitirá que o usuário coloque <strong>data e hora JUNTOS</strong> no mesmo input.</li>
+        <li><strong>INPUT EMAIL:</strong> Como o nome sugere, esse input é designado <strong>especificamente</strong> para receber o <strong>email do usuário</strong>. <br>
+        <strong>**NOTA IMPORTANTE: Esse input não é tão "completo" como os anteriores</strong> pois não consegue filtrar muito bem os emails. Ele filtrará <strong>apenas se no campo estiver escrito qualquer coisa sem um arroba (Exemplo: lucasvg). Contendo um só arroba, qualquer coisa depois ele aceitará, mesmo que o email esteja INCOMPLETO!!! (Exemplo: lucasvg@hot).</strong> 
+        </li>
+        <li><strong>INPUT TEL:</strong> Como o nome sugere, é um input melhor destinado a <strong>telefones.</strong> <br>
+        <strong>**NOTA IMPORTANTE:</strong> Da mesma forma que o input de email, esse input (sozinho) <strong>também não filtra muita coisa, além de apenas ser destinado a telefones.</strong> Por exemplo, no campo de telefone desse input, se apenas <strong>UM</strong> número for digitado ele aceitará. <br>
+        <strong>*****MUITO IMPORTANTE SOBRE CONFIGURAÇÃO DO INPUT TEL*****:</strong> Esse problema citado sobre o input tel pode ser resolvido usando <strong><ins>EXPRESSÕES REGULARES (ou RegEx - Inclusive o professor recomenda que estudemos),</ins></strong> que são usadas <strong>dentro de um parâmetro chamado <ins>PATTERN.</ins></strong> Dentro desse parâmetro, podemos configurar como será o <strong>padrão de dígitos</strong> que queremos para o input <strong><ins>(***EXPLICAÇÃO SOBRE A EXPRESSÃO USADA ESTÁ NA AULA 07, CAPÍTULO 24!!***).</ins></strong>
     </ul>
+
+    <p><strong>***NOVA TAG <ins>FIELDSET:</ins></strong> É uma tag bem legal usada para criar um <strong>agrupamento de campos</strong>, onde podemos dividir de forma mais organizada o que cada campo significará. <strong>A tag agrupa todas as outras tags de conteúdo do form, criando assim uma <ins>caixa</ins></strong> para melhor organização de conteúdo <strong>(No exemplo, os botões "Enviar" e "Limpar" ficaram de fora da caixa).</strong> Provavelmente, pelo que eu entendi, o fieldset deve ser uma caixa normal, porém semântica, destinada a formulários e às organizações deles.</p>
+
+    <p><strong>***NOVA TAG <ins>LEGEND:</ins></strong> Acompanha a tag <strong>fieldset</strong>, e é usada para criar um <strong>TÍTULO</strong> legal para o fieldset, que ficará "dentro da linha" de cima, como um título, criando um efeito legal. <strong>Deve ser usada dentro do fieldset (indentado) em primeiro lugar, como se fosse um título mesmo (tipo um caption).</strong></p>
 </body>
 </html>
