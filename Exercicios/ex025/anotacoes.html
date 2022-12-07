@@ -57,7 +57,7 @@
     <ul>
         <li><strong>method="GET":</strong> Esse é o primeiro método e é o método padrão, que é o qual já estamos utilizando (o método que aparece no link os dados colodados nos campos). <strong>NOTA: É utilizado quando os dados NÃO forem sensíveis. Só deve ser usado até 3 mil bytes. Não deve ser usado para envios de FOTOS ou qualquer outro tipo de arquivo.</strong></li>
         <br>
-        <li><strong>method="POST":</strong> Esse método irá <strong>esconder os parâmetros nos links</strong>. Ou seja, os dados colocados nos campos do formulário não aparecerão no link. <strong><ins>PS: ISSO NÃO TORNA NADA MAIS SEGURO</ins>.</strong> <strong>NOTA: É utilizado quando forem DADOS SENSÍVEIS. Utilizado para dados de mais de 3 mil bytes. Utilizado para ENVIO DE ARQUIVOS.</strong></li>
+        <li><strong>method="POST":</strong> Esse método irá <strong>esconder os parâmetros nos links</strong>. Ou seja, os dados colocados nos campos do formulário não aparecerão no link. <strong><ins>PS: ISSO NÃO TORNA NADA MAIS SEGURO</ins>.</strong> <strong>NOTA: É utilizado quando forem DADOS SENSÍVEIS. Utilizado para dados de mais de 3 mil bytes. Utilizado para ENVIO DE FOTOS E/OU ARQUIVOS.</strong></li>
     </ul>
     </p>
 
@@ -101,10 +101,43 @@
         <li><strong>INPUT TEL:</strong> Como o nome sugere, é um input melhor destinado a <strong>telefones.</strong> <br>
         <strong>**NOTA IMPORTANTE:</strong> Da mesma forma que o input de email, esse input (sozinho) <strong>também não filtra muita coisa, além de apenas ser destinado a telefones.</strong> Por exemplo, no campo de telefone desse input, se apenas <strong>UM</strong> número for digitado ele aceitará. <br>
         <strong>*****MUITO IMPORTANTE SOBRE CONFIGURAÇÃO DO INPUT TEL*****:</strong> Esse problema citado sobre o input tel pode ser resolvido usando <strong><ins>EXPRESSÕES REGULARES (ou RegEx - Inclusive o professor recomenda que estudemos),</ins></strong> que são usadas <strong>dentro de um parâmetro chamado <ins>PATTERN.</ins></strong> Dentro desse parâmetro, podemos configurar como será o <strong>padrão de dígitos</strong> que queremos para o input <strong><ins>(***EXPLICAÇÃO SOBRE A EXPRESSÃO USADA ESTÁ NA AULA 07, CAPÍTULO 24!!***).</ins></strong>
+        </li>
     </ul>
 
     <p><strong>***NOVA TAG <ins>FIELDSET:</ins></strong> É uma tag bem legal usada para criar um <strong>agrupamento de campos</strong>, onde podemos dividir de forma mais organizada o que cada campo significará. <strong>A tag agrupa todas as outras tags de conteúdo do form, criando assim uma <ins>caixa</ins></strong> para melhor organização de conteúdo <strong>(No exemplo, os botões "Enviar" e "Limpar" ficaram de fora da caixa).</strong> Provavelmente, pelo que eu entendi, o fieldset deve ser uma caixa normal, porém semântica, destinada a formulários e às organizações deles.</p>
 
     <p><strong>***NOVA TAG <ins>LEGEND:</ins></strong> Acompanha a tag <strong>fieldset</strong>, e é usada para criar um <strong>TÍTULO</strong> legal para o fieldset, que ficará "dentro da linha" de cima, como um título, criando um efeito legal. <strong>Deve ser usada dentro do fieldset (indentado) em primeiro lugar, como se fosse um título mesmo (tipo um caption).</strong></p>
+
+    <p><strong>**MAIS NOVOS INPUTS:</strong></p>
+    <ul>
+        <li><strong>INPUT CHECKBOX:</strong> Como o nome sugere, cria uma <strong>caixinha para marcar/caixinha de marcação (checkbox).</strong> <br>
+        <strong>NOTA: Os checkbox também devem ser relacionados e configurados a um <ins>LABEL!</ins></strong>
+        </li>
+        <li><strong>INPUT RADIO:</strong> Esse input, os botões de radio, são os botões de <strong>marcar</strong> (assim como os checkboxes) <strong>MAS</strong> que aceitam apenas <strong>UMA opção.</strong> Um bom exemplo de onde pode ser usado está no exemplo da página exemplo <strong>formulário05</strong>, onde temos uma opção para marcar sexo, onde deve ser marcado apenas uma opção. <br>
+        <strong>***MUITÍSSIMO IMPORTANTE: Todos os botões de radio que fizerem parte do MESMO GRUPO (fieldset) <ins>deverão ter o mesmo NAME!!!!</ins> Pois, sem o mesmo name, podemos ainda marcar mais de uma opção (o que justamente NÃO é o obvjetivo do botão de radio) e sequer desmarcar conseguimos uma vez que foi marcado! Para isso, todos os "radio" devem ter o mesmo NAME!</strong> <br>
+        <strong>*NOTA SOBRE IDS E NAME: Os botões devem ter o mesmo name, mas ainda devem ter os <ins>IDS DIFERENTES</ins> para que possam ser devidamente identificados nos LABELS! Sim, também devemos usar labels com eles.</strong> <br>
+        <strong>*PARÂMETRO CHECKED:</strong> É um parâmetro que pode ser usado <strong>tanto para radio, quanto para checkbox</strong> que, como o nome sugere, pode-se configurar para que uma opção já venha <strong>previamente marcada</strong>, caso assim a gente queira! <br>
+        <strong>*PARÂMETRO VALUE:</strong> No input radio, sem esse parâmetro, a informação enviada na URL sobre o sexo escolhido no formulário <strong>(Exemplo no formulario05)</strong> será apenas "on", <strong>o que, acho eu, que possa vir a causar alguma confusão na captação de informação da parte da programação, posteriormente.</strong> Então, usa-se o parâmetro <strong>"value"</strong> com a letra inicial de cada sexo <strong>(M ou F)</strong>, para que exatamente o que está dentro do value seja enviado na URL, a fim de melhorar a captação de informação.
+        </li>
+        <li>
+            <strong>INPUT COLOR:</strong> Como o nome já sugere, dá ao usuário a opção de escolher cores de forma bem livre. A cor será enviada <strong>em forma de código na URL,</strong> dependendo da forma em que a cor for escolhida (RGB, HSL etc).
+        </li>
+        <li>
+            <strong>INPUT RANGE:</strong> Cria-se uma "barrinha ajustável" para a <strong>escolha de um valor</strong>, como por exemplo <strong>(Exemplo na página formulário06)</strong>, uma pesquisa de satisfação. <br>
+            <strong>**NOTA: </strong>Pode-se usar o parâmetro <strong>"value"</strong> para determinar em que posição o valor da barrinha deve começar, assim como podemos também definir os <strong>valores mínimos e máximos</strong> que a barrinha pode ter, usando os parâmetros <strong>"min e max" (Por exemplo, se o valor de min for 1 e o valor de max for 5, os níveis a serem selecionados irão somente de 1 a 5). O valor de value, por padrão sempre começa na metade.</strong>
+        </li>
+        <li>
+            <strong>INPUT FILE:</strong> Permite que o usuário <strong>carregue fotos (como o nome é file, talvez também seja para arquivos no geral, mas o professor na aula só comentou sobre foto)</strong> para serem enviadas. <br>
+            <strong>*NOTA: Lembrando que para fazer o envio de fotos, arquivos ou qualquer coisa que passe de <ins>3 mil bytes</ins>, o método do form que deve ser utilizado é o <ins>POST!!!</ins></strong>
+        </li>
+    </ul>
+
+    <p><strong>****NOVA TAG SELECT:</strong> Essa é uma tag muito interessante pois nos permite <strong>criar uma lista com opções selecionáveis</strong>, como uma lista de estados do país, por exemplo <strong>(Exemplo usado no formulario07).</strong> Ela precisa de um name e um id, assim como as outras normalmente (e um label também, obviamente). <strong><ins>Porém, essa tag só cria a lista. Para criarmos as OPÇÕES de escolha da lista, devemos incluir (dentro da tag select) uma nova tag a seguir.</ins></strong></p>
+
+    <p><strong>****NOVA TAG OPTION (Complemento da tag select):</strong> Essa tag precisa estar <strong><ins>DENTRO da tag select</ins></strong>, e será a tag responsável por <strong>criar as opções</strong> na lista criada pela tag select. <strong>O que aparecerá como opção é o que for <ins>escrito DENTRO da tag</ins></strong>, e no value, a abreviação, <strong>pois o valor contido dentro do value será o dado enviado na URL para o script.</strong> Podemos também <strong>envelopar</strong> as opções para separarmos como quisermos, para uma melhor <strong>organização das opções dentro da lista, usando a tag a seguir.</strong></p>
+
+    <p><strong>**** NOVA TAG OPTGROUP (Complemento para a tag option):</strong> Feito para separar elementos option dentro da tag select, a tag "optgroup" ajuda muito na <strong>organização</strong> das opções, juntamente com um parâmetro: <br>
+    <strong><ins>O PARÂMETRO LABEL</ins> (sim, dessa vez como parâmetro), no caso da tag optgroup, criará algo como se fosse um título dentro da lista para as opções selecionadas, que sequer dá para selecionar <ins>(Por exemplo, na lista de estados do país, os estados da região sudeste estarão "separados" por um "título" escrito "Região Sudeste").</ins> O exemplo está na página formulario07.</strong> <br>
+    <strong>NOTA:</strong> Caso queiramos que qualquer opção já venha marcada como padrão, usa-se o parâmetro <strong><ins>select</ins> dentro do option.</strong></p>
 </body>
 </html>
