@@ -123,7 +123,7 @@
             <strong>INPUT COLOR:</strong> Como o nome já sugere, dá ao usuário a opção de escolher cores de forma bem livre. A cor será enviada <strong>em forma de código na URL,</strong> dependendo da forma em que a cor for escolhida (RGB, HSL etc).
         </li>
         <li>
-            <strong>INPUT RANGE:</strong> Cria-se uma "barrinha ajustável" para a <strong>escolha de um valor</strong>, como por exemplo <strong>(Exemplo na página formulário06)</strong>, uma pesquisa de satisfação. <br>
+            <strong>INPUT RANGE:</strong> Cria-se uma "barrinha ajustável" para a <strong>escolha de um valor</strong>, como por exemplo <strong>(Exemplo na página formulário06)</strong>, uma pesquisa de satisfação. <strong>Por padrão, os valores iniciais vão de 0 a 100.</strong> <br>
             <strong>**NOTA: </strong>Pode-se usar o parâmetro <strong>"value"</strong> para determinar em que posição o valor da barrinha deve começar, assim como podemos também definir os <strong>valores mínimos e máximos</strong> que a barrinha pode ter, usando os parâmetros <strong>"min e max" (Por exemplo, se o valor de min for 1 e o valor de max for 5, os níveis a serem selecionados irão somente de 1 a 5). O valor de value, por padrão sempre começa na metade.</strong>
         </li>
         <li>
@@ -146,5 +146,18 @@
     <strong>*NOTA:</strong> Tanto os valores de "value" e a profissão que escrevermos dentro da tag "option" aparecerão na lista. Para deixarmos apenas a parte escrita, basta tirar o valor do "value" (a sigla da profissão escrita. EXEMPLOS ESTÃO NA PAGINA FORMULARIO07).</p>
 
     <p><strong>***NOVA TAG TEXTAREA:</strong> É uma tag bem interessante que, como o nome sugere, cria uma <strong><ins>ÁREA DE TEXTO</ins></strong> onde o usuário poderá digitar uma mensagem. Também precisa ter um label próprio. <strong>Os parâmetros cols e rows definem o tamanho de colunas e linhas, respectivamente, que a caixa de texto terá (podendo ser ajustável com o mouse pelo usuário, de qualquer forma...).</strong></p>
+
+    <p><strong>******NOVA TAG OUTPUT (Capítulo 24, Aula 11, Módulo 4):</strong> Até agora, essa é a tag que mais chega perto da programação, pois essa tag consegue <strong>armazenar dados</strong> captados de algum input. <strong><ins>Dá-se um ID ao output para podermos relacionar a outros inputs.</ins></strong> <br>
+    <strong>**PARÂMETRO ONINPUT (Quando entrarmos com dados...):</strong> <strong><ins>É onde relacionamos o ID do output, no input!!</ins></strong> .Esse parâmetro <strong>(que é usado no INPUT)</strong> é o responsável por <strong>executar uma função</strong> que, no exemplo de página <strong>formulario08</strong>, foi executada uma função usando linguagem JavaScript para poder retornar um valor. <br>
+    <strong>EXEMPLO DA FUNÇÃO USADA (Dentro do input): oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"</strong> <br>
+    ONDE:</p>
+    <ul>
+        <li><strong>isoma:</strong> isoma foi a <strong>ID</strong> usada na tag <strong>output, que representará a soma dos dois primeiros números escolhidos nos dois inputs.</strong></li>
+        <li><strong>innerHTML:</strong> Usado para se referir ao que está <strong>DENTRO do HTML</strong> (no caso, o conteúdo ENTRE a tag do output) de alguma tag <strong>(no caso, dentro do HTML de "isoma", que é o output)</strong></li>
+        <li><strong>Number (o N precisa ser maiúsculo mesmo):</strong> Provavelmente refere-se ao tipo do objeto (não sei ao certo). Número <strong>de algo.</strong></li>
+        <li><strong>in1 e in2.value:</strong> in1 e in2 são os <strong>IDs</strong> do primeiro e do segundo input, destinados a receber o número escolhido pelo usuário e, <strong>o value é justamente o que queremos captar de in1 e in2</strong>, pois é "value" que guardará a informação dos dois inputs.</li>
+    </ul>
+    <p><strong>NOTA: A função deve ser colocada em ambos os inputs, de número 1 e número 2!</strong> <br>
+    <strong>NOTA 2: O output não é feito para enviar nada, é feito para calcular e <ins>mostrar na tela.</ins></strong></p>
 </body>
 </html>

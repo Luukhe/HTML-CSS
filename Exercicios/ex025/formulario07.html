@@ -13,6 +13,7 @@
         <p>
             <label for="iestado">Estado</label>
             <select name="estado" id="iestado">
+
                 <option value="" selected>--- Escolha ---</option>
 
                 <optgroup label="Região Sudeste">
@@ -32,7 +33,7 @@
 
         <p>
             <label for="iprof">Profissão: </label>
-            <input type="text" name="prof" id="iprof" list="proflist">
+            <input type="text" name="prof" id="iprof" list="proflist" autocomplete="work">
             <datalist id="proflist">
                 <option>Administrador</option>
                 <option>Desenvolvedor</option>
