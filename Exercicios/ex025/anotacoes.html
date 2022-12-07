@@ -138,6 +138,13 @@
 
     <p><strong>**** NOVA TAG OPTGROUP (Complemento para a tag option):</strong> Feito para separar elementos option dentro da tag select, a tag "optgroup" ajuda muito na <strong>organização</strong> das opções, juntamente com um parâmetro: <br>
     <strong><ins>O PARÂMETRO LABEL</ins> (sim, dessa vez como parâmetro), no caso da tag optgroup, criará algo como se fosse um título dentro da lista para as opções selecionadas, que sequer dá para selecionar <ins>(Por exemplo, na lista de estados do país, os estados da região sudeste estarão "separados" por um "título" escrito "Região Sudeste").</ins> O exemplo está na página formulario07.</strong> <br>
-    <strong>NOTA:</strong> Caso queiramos que qualquer opção já venha marcada como padrão, usa-se o parâmetro <strong><ins>select</ins> dentro do option.</strong></p>
+    <strong>NOTA:</strong> Caso queiramos que qualquer opção já venha marcada como padrão, usa-se o parâmetro <strong><ins>selected</ins> dentro do option.</strong></p>
+
+    <p><strong>***NOVA TAG DATALIST (abreviação do emmet é datal):</strong> Essa tag nos permite que, além de <strong>podermos escrever no campo, também tenha uma lista de opções, ou seja, <ins>são as duas possibilidades ao mesmo tempo, para no caso de se alguma opção que o usuário for escolher não contiver na lista, ele então poderá escrever sua opção.</ins></strong> A tag deve ser usada <strong>logo abaixo de um <ins>input text</ins></strong>, pois logo em seguida, o <strong>datalist deverá ser <ins>RELACIONADO</ins> ao input text para que seja possível criar o campo digitável e uma lista ao mesmo tempo.</strong> <br>
+    Para relacionarmos o datalist ao input text, <strong>dá-se um ID ao datalist, e um novo parâmetro chamado <ins>LIST</ins> ao input text</strong>, que é onde deve-se colocar o ID do datalist, para que possa ocorrer a relação entre eles! <br>
+    <strong>**IMPORTANTE: TAMBÉM UTILIZA-SE A TAG "OPTION" PARA CRIAR AS OPÇÕES DENTRO DO DATALIST, ONDE DEVEMOS ESCREVER A PROFISSÃO DENTRO DO OPTION E A SIGLA DA PROFISSÃO DENTRO DO VALUE!!!</strong> <br>
+    <strong>*NOTA:</strong> Tanto os valores de "value" e a profissão que escrevermos dentro da tag "option" aparecerão na lista. Para deixarmos apenas a parte escrita, basta tirar o valor do "value" (a sigla da profissão escrita. EXEMPLOS ESTÃO NA PAGINA FORMULARIO07).</p>
+
+    <p><strong>***NOVA TAG TEXTAREA:</strong> É uma tag bem interessante que, como o nome sugere, cria uma <strong><ins>ÁREA DE TEXTO</ins></strong> onde o usuário poderá digitar uma mensagem. Também precisa ter um label próprio. <strong>Os parâmetros cols e rows definem o tamanho de colunas e linhas, respectivamente, que a caixa de texto terá (podendo ser ajustável com o mouse pelo usuário, de qualquer forma...).</strong></p>
 </body>
 </html>
