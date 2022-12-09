@@ -41,5 +41,20 @@
         <li><strong>media="screen and (orientation: portrait)":</strong> Informará o media type (screen) e o media feature cuja <strong>orientação</strong> queremos configurar. No caso, é a configuração de um dispositivo que está <strong>EM PÉ, ou seja, orientation: portrait.</strong></li>
         <li><strong>media="screen and (orientation: landscape)":</strong> Informará o media type (screen) e media feature cuja <strong>orientação</strong> queremos configurar. No caso, é a configuração de um dispositivo que está <strong>DEITADO, ou seja, orientation: landscape.</strong></li>
     </ul>
+    <p><strong>**PS: O MEDIA FEATURE É O <ins>ORIENTATION.</ins></strong></p>
+
+    <p><strong>DICA: Após feitas as configurações gerais (configurações no media type "all") que servirão para todas as medias, podemos testar as configurações de orientation esticando ou alargando o navegador como se a dimensão fosse para telas deitadas ou telas em pé (para que possamos ver como ficará no tipo de media que queremos ver).</strong></p>
+    <p><strong>DICA 2, LEMBRAR: Sempre que for trabalhar com <ins>background-size contain</ins> e a imagem ficar bugada bem pequena, <ins>usar height 100vh e width 100vw</ins>.</strong></p>
+
+    <p><strong>***UNIFICANDO PÁGINAS DE CSS <ins>(Exemplo no exercício mq003)</ins>:</strong> Às vezes podemos não querer criar tantas páginas de CSS diferentes (para telas diferentes) para apenas um <strong>projeto pequeno</strong>, tendo a possibilidade de <strong>unificarmos</strong> as páginas em apenas <strong>uma página de css, ou até mesmo em estilo local.</strong> Para isso, <strong>dentro da área de declarações de CSS, <ins>podemos simplesmente chamar o mesmo "media"</ins> do parâmetro do link, mas dessa vez com um "@" (que nem o charset, por exemplo) e especificar, então, o media type e o media feature, da mesma forma que fazemos quando chamamos um link.</strong> Então, dentro da área de declarações de CSS, ficaria assim: <br>
+    <strong>@media screen and (orientation: portrait) <br>
+    @media screen and (orientation: landscape) <br>
+    @media all (até podemos fazer, mas seria apenas com o intuito de sinalizar, pois não faz diferença colocar ou não.)</strong></p>
+    <p>Concluindo, temos 3 maneiras de fazermos nossas páginas de diferentes media queries:</p>
+    <ol>
+        <li><strong>Criando 3 páginas de CSS diferentes para cada tela.</strong></li>
+        <li><strong>Chamando o media de outras telas e fazendo tudo em estilo local.</strong></li>
+        <li><strong>Chamando o media de outras telas dentro de <ins>uma só</ins> página de CSS (o que eu acho que é o que fazem normalmente).</strong></li>
+    </ol>
 </body>
 </html>
