@@ -56,5 +56,26 @@
         <li><strong>Chamando o media de outras telas e fazendo tudo em estilo local.</strong></li>
         <li><strong>Chamando o media de outras telas dentro de <ins>uma só</ins> página de CSS (o que eu acho que é o que fazem normalmente).</strong></li>
     </ol>
+
+    <p><strong>****MOBILE FIRST:</strong> Como o nome sugere, o conceito de <strong>mobile first</strong> se refere à criação de projetos (sites) visando, <strong>primeiramente,</strong> dispositivos móveis. Além de melhorarmos a experiência do usuário, ainda ganha-se uma <strong>"valorização" dos mecanismos de busca do Google, que priorizam projetos que são mobile first.</strong></p>
+
+    <p><strong>***DÚVIDA QUE EU TINHA SOBRE A DIFERENÇA ENTRE BODY E HTML, EXPLICADO POR UM COMENTÁRIO DO YOUTUBE:</strong> Quando ele especifica HTML com 100vh (altura total do dispositivo) ele faz isso para a página como um todo. Assim todos os elementos ganham o espaço da altura total do dispositivo. O body, por outro lado é filho de HTML e, portanto, possuí um "tamanho" menor, pois está dentro da caixa HTML (aninhamento). É por isso que aparece a barra de rolagem, porque o tamanho de body não é o suficiente para mostrar o conteúdo completo em uma tela menor.
+    Tente fazer o teste, em telas de tamanho ainda menores a barra de rolagem irá aparecer, o HTML agora não possuí espaço suficiente também.</p>
+
+    <p><strong>*****TYPICAL DEVICE BREAKPOINTS (Aula 08, capítulo 25):</strong> Basicamente é, quando criamos media queries, temos que determinar <strong>qual será o tamanho de uma tela de celular, qual o tamanho de uma tela de tablet, tamanho de um monitor</strong> que usaremos para determinar o media query de cada tela (não sei, mas acho que isso deixa um pouco de lado o que usei anteriormente, o orientation portrait e landscape...). Em minhas palavras: pelo que eu entendi, então, define-se um tamanho específico (ou um máximo de tamanho, por exemplo) para cada tipo de tela, onde esse valor pode até variar com o tempo (pode ser que o valor para uma tela de celular venha a mudar), <strong>ou seja</strong>, acho que normalmente existe um padrão de tamanho para as telas que queremos configurar, mas que estão sujeitas a mudanças conforme o tempo passa, precisando assim, pesquisar para ver qual é o tamanho ideal atualmente. <br>
+    <strong>TAMANHOS USADOS PARA CADA TIPO DE TELA (Esses tamanhos foram usados na aula, já podem ter mudado):</strong></p>
+    <ul>
+        <li><strong>Pequenas telas:</strong> até 600px. Representação: <strong>@media screen and (max-width: 600px) {}</strong></li>
+        <li><strong>Celular:</strong> de 600px até 768px. Representação: <strong>@media screen and (min-width: 600px) and (max-width: 768px) {}</strong></li>
+        <li><strong>Tablet:</strong> de 768px até 992px. Representação: <strong>@media screen and (min-width: 768px) and (max-width: 992px) {}</strong></li>
+        <li><strong>Desktop:</strong> de 992px até 1200px. Representação: <strong>@media screen and (min-width: 992px) and (max-width: 1200px) {}</strong></li>
+        <li><strong>Grandes telas:</strong> acima de 1200px. Representação: <strong>@media screen and (min-width: 1200px) {}</strong></li>
+    </ul>
+    <p><strong>Esses valores são de acordo com a W3C! <br> 
+    LEMBRANDO: Tudo depois do "AND" é <ins>FEATURE</ins>.</strong></p>
+    <p><strong>***NOTA IMPORTANTE: No exercício de mobile first (mq004), os primeiros DOIS breakpoints serão ignorados e iremos fazer a partir de telas de Tablet, pois o <ins>primeiro style feito com media ALL é o estilo de mobile first, que atenderá às telas pequenas</ins> (Pequenas telas e Celulares).</strong></p>
+    <p><strong>NOTA 2: Todas as configurações do primeiro estilo feito "media all" serão herdadas às outras configurações de media, por isso é importante começar pelas versões para celular, pois depois, as configurações a serem mudadas viram apenas mais "pontuais".</strong></p>
+
+    <p><strong>SOBRE BACKGROUND NA IMPRESSORA:</strong> No papel, não tem como imprimir imagem de background! Então, é <strong>desnecessário</strong> incluir um background-image para query de impressora.</p>
 </body>
 </html>
