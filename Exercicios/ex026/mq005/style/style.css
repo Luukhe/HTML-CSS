@@ -31,6 +31,7 @@ header > h1 {
 #burguer:hover {
     background-color: white;
     color: black;
+    transition: 0.2s;
 }
 
 menu {
@@ -72,4 +73,5 @@ article p {
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px;
+    line-height: 1.4em;
 }
